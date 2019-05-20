@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_exemplos">Examples</string>
+    <string name="menu_pesquisar">Search</string>
+    <string name="menu_sobre">About</string>
+    <string name="menu_equipa">Team</string>
+    <string name="lingua">Português</string>
+    <string name="key_description">Description algo bla bla</string>
+    <string name="key_title">YAKE</string>
+    <string name="key_search">Search</string>
+    <string name="key_try">Try</string>
+    <string name="key_teste">something</string>
+</resources>
