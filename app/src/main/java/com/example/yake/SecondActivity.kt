@@ -1,19 +1,16 @@
 package com.example.yake
 
-import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
 import com.google.android.material.navigation.NavigationView
-import androidx.core.app.ActivityCompat
-import androidx.fragment.app.Fragment
-import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
 import android.view.KeyEvent
 import android.view.MenuItem
+import com.example.yake.Auxiliares.EndDrawerToggle
+import com.example.yake.Auxiliares.LangHelper
+import com.example.yake.Fragmentos.FragmentAgradecimentos
+import com.example.yake.Fragmentos.Fragment_Contacts
 import kotlinx.android.synthetic.main.activity_second.*
 
 
@@ -61,7 +58,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     R.id.fragment_container,
                     BlankFragment()
                 )
-                    .addToBackStack("3").commit()
+                    .addToBackStack("1").commit()
                 navView?.setCheckedItem(R.id.nav_one)
                 check = R.id.nav_one
             } else {
@@ -124,6 +121,27 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                         refreshApp("en")
                     }
                 }
+                R.id.nav_six -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                        FragmentAgradecimentos()
+                    )
+                        .addToBackStack("6").commit()
+                    check = R.id.nav_six
+                }
+                R.id.nav_eight  -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                        Fragment_Contacts()
+                    )
+                        .addToBackStack("8").commit()
+                    check = R.id.nav_eight
+                }
+                R.id.nav_nine  -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                        BlankFragment()
+                    )
+                        .addToBackStack("9").commit()
+                    check = R.id.nav_nine
+                }
             }
 
             drawer?.closeDrawer(GravityCompat.END)
@@ -140,7 +158,6 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
 
         override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-            println("jeededj")
             return super.onKeyDown(keyCode, event)
         }
 
@@ -177,6 +194,22 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                         navView?.setCheckedItem(R.id.nav_three)
                         check = R.id.nav_three
                     }
+                    "4" -> {
+                        navView?.setCheckedItem(R.id.nav_four)
+                        check=R.id.nav_four
+                    }
+                    "6" -> {
+                        navView?.setCheckedItem(R.id.nav_six)
+                        check=R.id.nav_six
+                    }
+                    "8" -> {
+                        navView?.setCheckedItem(R.id.nav_eight)
+                        check=R.id.nav_eight
+                    }
+                    "9" -> {
+                        navView?.setCheckedItem(R.id.nav_nine)
+                        check=R.id.nav_nine
+                    }
                 }
 
 
@@ -184,7 +217,6 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
             }
 
-            println("rfkofofr")
             if (drawer!!.isDrawerOpen(GravityCompat.START)) {
                 drawer!!.closeDrawer(GravityCompat.START)
 
@@ -197,7 +229,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         fun refreshApp(lang: String) {
             val context = langHelper.setNewLocale(this, lang)
             val refresh = Intent(context, MainActivity::class.java)
-            refresh.putExtra("SECONDTIME", false)
+            refresh.putExtra("FIRSTTIME", false)
             finish()
             startActivity(refresh)
         }

@@ -1,14 +1,12 @@
-package com.example.yake
+package com.example.yake.Auxiliares
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.graphics.drawable.DrawerArrowDrawable
 import androidx.appcompat.widget.AppCompatImageButton
 import androidx.appcompat.widget.Toolbar
 import android.view.View
-
-
+import com.example.yake.R
 
 
 class EndDrawerToggle(

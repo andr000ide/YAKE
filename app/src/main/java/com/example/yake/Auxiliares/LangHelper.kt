@@ -1,7 +1,8 @@
-package com.example.yake
+package com.example.yake.Auxiliares
 
 import android.content.Context
 import android.content.res.Configuration
+import com.example.yake.R
 import java.util.*
 
 class LangHelper(context: Context) {

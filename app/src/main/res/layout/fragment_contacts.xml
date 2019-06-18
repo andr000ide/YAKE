@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contactos"
+            android:textAlignment="center"
+            android:paddingTop="15dp"
+            android:textSize="35dp"
+            android:textStyle="bold"
+    />
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textAlignment="center"
+              android:paddingTop="20dp"
+              android:textSize="20sp"
+              android:text="@string/contactos_texto"/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textAlignment="center"
+              android:paddingTop="10dp"
+              android:textSize="25sp"
+              android:text="admin@contamehistorias.pt"/>
+    <Button android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="@string/copiar_mail"
+            android:layout_marginTop="15dp"
+            android:textColor="#ffffff"
+            android:id="@+id/copiar_mail"
+            android:backgroundTint="@color/backgroundMainCoiso"/>
+
+</LinearLayout>

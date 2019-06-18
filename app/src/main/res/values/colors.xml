@@ -3,8 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="backgroundMain">#4fc1ea</color>
-    <color name="backgroundMainCoiso">#38add2</color>
+    <color name="backgroundMain">#2B3E50</color>
+    <color name="backgroundMainCoiso">#4E5D6C</color>
     <color name="searchbar">#72CDEE</color>
     <color name="colorGrey">#D6D6D6</color>
 </resources>

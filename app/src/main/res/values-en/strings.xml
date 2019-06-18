@@ -10,4 +10,29 @@
     <string name="key_search">Search</string>
     <string name="key_try">Try</string>
     <string name="key_teste">something</string>
+    <string name="key_agradecimentos">Acknowledgements</string>
+    <string name="key_contactos">Contacts</string>
+    <string name="agradecimentos">Acknowledgements</string>
+    <string name="institui_es">Institutions</string>
+    <string name="instituicao_texto">Colocarem os logotipos das instituições envolvidas (podem vê-los no sobre….no fundo
+        da página). Coloquem todos menos o último (o four eyes). Esse é para ser colocado no item a seguir
+    </string>
+    <string name="financiamento">Funding</string>
+    <string name="financiamento_texto">This project was partially funded by Project “TEC4Growth - Pervasive
+        Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” which is
+        financed by the NORTE 2020, under the PORTUGAL 2020 Partnership Agreement, and through the European Regional
+        Development Fund (ERDF).
+    </string>
+    <string name="outros">Others</string>
+    <string name="outros_texto">
+        A special thanks goes to the <a href="http://arquivo.pt">Portuguese Web Archive</a> and to its team for creating an
+        outstanding platform that aims to archive the Portuguese digital contents, thus providing not only the share of
+        knowledge but also the emergence of new and innovative products.
+
+    </string>
+    <string name="liaad_url">https://www.inesctec.pt/en</string>
+    <string name="mail_foi_copiado">" Mail has been copied"</string>
+    <string name="contactos">contact</string>
+    <string name="contactos_texto">For any inquires please contact us at:</string>
+    <string name="copiar_mail">Copy Mail</string>
 </resources>

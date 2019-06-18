@@ -26,5 +26,24 @@
               android:title="@string/lingua">
         </item>
 
+
+        <item android:id="@+id/nav_six"
+              android:icon="@drawable/ic_thumb_up_black_24dp"
+              android:title="@string/key_agradecimentos">
+
+        </item>
+
+        <item android:id="@+id/nav_nine"
+              android:icon="@drawable/ic_import_contacts_black_24dp"
+              android:title="Media">
+
+        </item>
+        <item android:id="@+id/nav_eight"
+              android:icon="@drawable/ic_import_contacts_black_24dp"
+              android:title="@string/key_contactos">
+
+        </item>
+
+
     </group>
 </menu>

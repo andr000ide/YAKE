@@ -1,13 +1,12 @@
 package com.example.yake
 
-import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.yake.Auxiliares.LangHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -67,6 +66,12 @@ class MainActivity : AppCompatActivity() {
         refresh.putExtra("FIRSTTIME", false)
         finish()
         startActivity(refresh)
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed();
+        finishAffinity(); // or finish();
+        //super.onBackPressed()
     }
 }
 

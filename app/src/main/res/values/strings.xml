@@ -15,4 +15,31 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_name" translatable="false">YAKE</string>
+    <string name="key_agradecimentos">Agradecimentos</string>
+    <string name="key_contactos">Contactos</string>
+    <string name="agradecimentos">Agradecimentos</string>
+    <string name="institui_es">Instituições</string>
+    <string name="instituicao_texto">Colocarem os logotipos das instituições envolvidas (podem vê-los no sobre….no fundo
+        da página). Coloquem todos menos o último (o four eyes). Esse é para ser colocado no item a seguir
+    </string>
+    <string name="financiamento">Financiamento</string>
+    <string name="financiamento_texto">Este projeto foi parcialmente financiado pelo projeto “TEC4Growth - Pervasive
+        Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é
+        financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund
+        (ERDF).
+    </string>
+    <string name="outros">Outros</string>
+    <string name="outros_texto">Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e
+        à sua
+        equipa que ao longo dos últimos anos criou uma plataforma de reconhecido de valor na preservação dos conteúdos
+        digitais portugueses,
+        fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.
+    </string>
+    <string name="liaad_url">https://www.inesctec.pt/pt</string>
+    <string name="mail_foi_copiado">" O email foi copiado."</string>
+    <string name="contactos">contactos</string>
+    <string name="contactos_texto">Para qualquer questão relacionada com o Conta-me Histórias por favor contactar-nos
+        através do seguinte email:
+    </string>
+    <string name="copiar_mail">Copiar Mail</string>
 </resources>
