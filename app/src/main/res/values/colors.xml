@@ -7,4 +7,5 @@
     <color name="backgroundMainCoiso">#4E5D6C</color>
     <color name="searchbar">#72CDEE</color>
     <color name="colorGrey">#D6D6D6</color>
+    <color name="grayscale">#CC4FC1EA</color>
 </resources>

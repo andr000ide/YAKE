@@ -36,9 +36,15 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        search_button.setOnClickListener {
+        btn_url.setOnClickListener {
             val randomIntent = Intent(this, SecondActivity::class.java)
-            randomIntent.putExtra("indicacao","pesquisar")
+            randomIntent.putExtra("indicacao","url")
+            startActivity(randomIntent)
+        }
+
+        btn_texto.setOnClickListener {
+            val randomIntent = Intent(this, SecondActivity::class.java)
+            randomIntent.putExtra("indicacao","texto")
             startActivity(randomIntent)
         }
 

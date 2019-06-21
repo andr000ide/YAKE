@@ -11,6 +11,7 @@ import com.example.yake.Auxiliares.EndDrawerToggle
 import com.example.yake.Auxiliares.LangHelper
 import com.example.yake.Fragmentos.FragmentAgradecimentos
 import com.example.yake.Fragmentos.Fragment_Contacts
+import com.example.yake.Fragmentos.FragmentoPesquisarURL
 import kotlinx.android.synthetic.main.activity_second.*
 
 
@@ -31,13 +32,6 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         val indicator: String = intent.getStringExtra("indicacao")
 
         langHelper = LangHelper(applicationContext)
-        /*
-         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(FragmentOne(),"One")
-        adapter.addFragment(FragmentOne(),"two")
-        viewpager.adapter = adapter
-        tabs.setupWithViewPager(viewpager)
-        */
 
         drawer = drawerlayout
         val toggle = EndDrawerToggle(
@@ -61,7 +55,8 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     .addToBackStack("1").commit()
                 navView?.setCheckedItem(R.id.nav_one)
                 check = R.id.nav_one
-            } else {
+            }
+            else if (indicator.equals("texto")) {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.fragment_container,
                     BlankFragment()
@@ -70,7 +65,15 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 navView?.setCheckedItem(R.id.nav_two)
                 check = R.id.nav_two
             }
-
+            else {
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fragment_container,
+                    FragmentoPesquisarURL()
+                )
+                    .addToBackStack("10").commit()
+                navView?.setCheckedItem(R.id.nav_ten)
+                check = R.id.nav_ten
+            }
         }
     }
 
@@ -142,6 +145,13 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                         .addToBackStack("9").commit()
                     check = R.id.nav_nine
                 }
+                R.id.nav_ten  -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                        BlankFragment()
+                    )
+                        .addToBackStack("10").commit()
+                    check = R.id.nav_ten
+                }
             }
 
             drawer?.closeDrawer(GravityCompat.END)
@@ -209,6 +219,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     "9" -> {
                         navView?.setCheckedItem(R.id.nav_nine)
                         check=R.id.nav_nine
+                    }
+                    "10" -> {
+                        navView?.setCheckedItem(R.id.nav_ten)
+                        check=R.id.nav_ten
                     }
                 }
 

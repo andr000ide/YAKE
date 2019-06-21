@@ -12,6 +12,10 @@
               android:icon="@drawable/ic_search_black_24dp"
               android:title="@string/menu_pesquisar"/>
 
+        <item android:id="@+id/nav_ten"
+              android:icon="@drawable/ic_search_black_24dp"
+              android:title="@string/key_pesquisar_url"/>
+
         <item android:id="@+id/nav_three"
               android:icon="@drawable/ic_info_black_24dp"
               android:title="@string/menu_sobre"/>
@@ -20,13 +24,6 @@
               android:icon="@drawable/ic_team_24dp"
               android:title="@string/menu_equipa">
         </item>
-
-        <item android:id="@+id/nav_five"
-              android:icon="@drawable/ic_flag_black_24dp"
-              android:title="@string/lingua">
-        </item>
-
-
         <item android:id="@+id/nav_six"
               android:icon="@drawable/ic_thumb_up_black_24dp"
               android:title="@string/key_agradecimentos">
@@ -41,7 +38,10 @@
         <item android:id="@+id/nav_eight"
               android:icon="@drawable/ic_import_contacts_black_24dp"
               android:title="@string/key_contactos">
-
+        </item>
+        <item android:id="@+id/nav_five"
+              android:icon="@drawable/ic_flag_black_24dp"
+              android:title="@string/lingua">
         </item>
 
 
