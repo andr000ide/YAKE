@@ -21,7 +21,7 @@
               app:layout_constraintEnd_toEndOf="parent"
               android:textColor="#FFFFFF"
               app:layout_constraintVertical_bias="0.1"
-              android:text="@string/key_pesquisar_url" android:gravity="center" android:textSize="40sp"/>
+              android:text="@string/key_pesquisar_texto" android:gravity="center" android:textSize="40sp"/>
 
     <TextView
             android:id="@+id/titulo"
@@ -64,12 +64,14 @@
                   android:paddingTop="10dp"
                   android:paddingBottom="10dp"
                   android:paddingStart="20dp"
-                  android:paddingEnd="50dp"
+                  android:paddingEnd="40dp"
                   android:background="@drawable/edit_text_custom"
                   android:textColorHint="@drawable/color_state_list"
                   android:textColor="@drawable/color_state_list"
-                  android:maxLines="1"
                   android:inputType="text"
+                  android:singleLine="false"
+                  android:maxLines="10"
+                  android:lines="2"
                   android:gravity="center_vertical"
                   app:layout_constraintTop_toTopOf="parent"
                   android:hint="url"

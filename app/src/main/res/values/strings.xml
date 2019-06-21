@@ -43,5 +43,6 @@
     </string>
     <string name="copiar_mail">Copiar Mail</string>
     <string name="key_pesquisar_url">Pesquisar por Url</string>
+    <string name="key_pesquisar_texto">Pesquisar por Texto</string>
     <string name="loading_wordcloud">A Worldcloud está a carregar...</string>
 </resources>

@@ -11,6 +11,7 @@ import com.example.yake.Auxiliares.EndDrawerToggle
 import com.example.yake.Auxiliares.LangHelper
 import com.example.yake.Fragmentos.FragmentAgradecimentos
 import com.example.yake.Fragmentos.Fragment_Contacts
+import com.example.yake.Fragmentos.FragmentoPesquisarTexto
 import com.example.yake.Fragmentos.FragmentoPesquisarURL
 import kotlinx.android.synthetic.main.activity_second.*
 
@@ -59,7 +60,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             else if (indicator.equals("texto")) {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.fragment_container,
-                    BlankFragment()
+                    FragmentoPesquisarTexto()
                 )
                     .addToBackStack("2").commit()
                 navView?.setCheckedItem(R.id.nav_two)
@@ -95,7 +96,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     if (check != R.id.nav_two) {
                         supportFragmentManager.beginTransaction().replace(
                             R.id.fragment_container,
-                            BlankFragment()
+                            FragmentoPesquisarTexto()
                         )
                             .addToBackStack("2").commit()
                         check = R.id.nav_two
@@ -147,7 +148,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 }
                 R.id.nav_ten  -> {
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
-                        BlankFragment()
+                        FragmentoPesquisarURL()
                     )
                         .addToBackStack("10").commit()
                     check = R.id.nav_ten

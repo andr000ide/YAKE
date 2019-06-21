@@ -28,7 +28,7 @@ import java.io.FileOutputStream
 import java.util.*
 
 
-class FragmentUrl : androidx.fragment.app.Fragment() {
+class FragmentTexto : androidx.fragment.app.Fragment() {
     private var sharePath = "no"
     private var aux = 0
     lateinit var call: Call<Example_Yake>
@@ -42,7 +42,7 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
         val adapter = ViewPagerAdapter(childFragmentManager)
 
 
-        val url = arguments?.getString("url")
+        val texto = arguments?.getString("texto")
 
 
         view.linear_vis.visibility = View.INVISIBLE
@@ -55,58 +55,58 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
 
         view.spin_kit.visibility = View.VISIBLE
 
-            val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
-            call = service!!.search_keywords_url(url!!,"2","20")
-            call?.enqueue(object : Callback<Example_Yake> {
+        val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
+        call = service!!.search_keywords_texto(texto!!,"2","20")
+        call?.enqueue(object : Callback<Example_Yake> {
 
 
-                override fun onResponse(call: Call<Example_Yake>, response: Response<Example_Yake>) {
-                    val examples = response.body()
-                    if (response.message().equals("INTERNAL SERVER ERROR")) {
-                        withButtonCentered(view)
-                        //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
-                        //activity!!.onBackPressed()
-                    }
-                    if (examples == null) {
-                        view.linear_vis.visibility = View.VISIBLE
-                        view.spin_kit.visibility = View.INVISIBLE
-                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
-                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                        view.view_grayscreen.visibility = View.GONE
-                        // por popup e mandar para o fragmento two
-                    }
-                    examples?.let {
-
-                        println(examples)
-
-                        var gson = Gson()
-                        var jsonString = gson.toJson(examples)
-
-
-                        var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,"")
-                        var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
-
-                        adapter.addFragment(fragmento1, "Annotated Text")
-                        adapter.addFragment(fragmento2, "WordCloud")
-                        view.viewpager.adapter = adapter
-                        view.tabs.setupWithViewPager(view.viewpager)
-
-                        view.linear_vis.visibility = View.VISIBLE
-                        view.spin_kit.visibility = View.INVISIBLE
-
-                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
-                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                        view.view_grayscreen.visibility = View.GONE
-                    }
+            override fun onResponse(call: Call<Example_Yake>, response: Response<Example_Yake>) {
+                val examples = response.body()
+                if (response.message().equals("INTERNAL SERVER ERROR")) {
+                    withButtonCentered(view)
+                    //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
+                    //activity!!.onBackPressed()
                 }
-
-                override fun onFailure(call: Call<Example_Yake>, t: Throwable) {
-                    if (aux != 1) {
-                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                        withButtonCentered(view)
-                    }
+                if (examples == null) {
+                    view.linear_vis.visibility = View.VISIBLE
+                    view.spin_kit.visibility = View.INVISIBLE
+                    // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    view.view_grayscreen.visibility = View.GONE
+                    // por popup e mandar para o fragmento two
                 }
-            })
+                examples?.let {
+
+                    println(examples)
+
+                    var gson = Gson()
+                    var jsonString = gson.toJson(examples)
+
+
+                    var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,texto)
+                    var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
+
+                    adapter.addFragment(fragmento1, "Annotated Text")
+                    adapter.addFragment(fragmento2, "WordCloud")
+                    view.viewpager.adapter = adapter
+                    view.tabs.setupWithViewPager(view.viewpager)
+
+                    view.linear_vis.visibility = View.VISIBLE
+                    view.spin_kit.visibility = View.INVISIBLE
+
+                    // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    view.view_grayscreen.visibility = View.GONE
+                }
+            }
+
+            override fun onFailure(call: Call<Example_Yake>, t: Throwable) {
+                if (aux != 1) {
+                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    withButtonCentered(view)
+                }
+            }
+        })
 
 
 
@@ -177,10 +177,10 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
 
 
     companion object {
-        fun newInstance(url: String): FragmentUrl {
+        fun newInstance(texto: String): FragmentTexto {
             val args = Bundle()
-            args.putString("url", url)
-            val fragment = FragmentUrl()
+            args.putString("texto", texto)
+            val fragment = FragmentTexto()
             fragment.arguments = args
             return fragment
         }
