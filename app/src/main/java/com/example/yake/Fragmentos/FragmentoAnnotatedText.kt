@@ -31,6 +31,9 @@ class FragmentoAnnotatedText : androidx.fragment.app.Fragment() {
 
         var jsonarray = arguments?.getString("jsonYake")
         var texto = arguments?.getString("texto")
+        var titulo = arguments?.getString("titulo")
+
+        view.titulo.text=titulo
 
         view.texto_anotado.text = texto
 
@@ -41,10 +44,11 @@ class FragmentoAnnotatedText : androidx.fragment.app.Fragment() {
     }
 
     companion object {
-        fun newInstance(jsonString: String,texto : String): FragmentoAnnotatedText {
+        fun newInstance(jsonString: String,texto : String,titulo : String): FragmentoAnnotatedText {
             val args = Bundle()
             args.putString("jsonYake", jsonString)
             args.putString("texto",texto)
+            args.putString("titulo",titulo)
             val fragment = FragmentoAnnotatedText()
             fragment.arguments = args
             return fragment

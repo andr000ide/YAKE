@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import android.widget.SeekBar
+import android.widget.SeekBar.OnSeekBarChangeListener
 import com.example.yake.R
 import com.example.yake.SecondActivity
-import kotlinx.android.synthetic.main.pesquisar_url.view.*
+import kotlinx.android.synthetic.main.pesquisar_texto.view.*
+import kotlinx.android.synthetic.main.pesquisar_url.view.searchbar
 
 
 class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
@@ -20,32 +23,73 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.pesquisar_texto, container, false)
 
-        view.constraintclick.setOnFocusChangeListener { _, _ ->
-            run {
-                view.constraintclick.hideKeyboard()
-                view.imagePesquisa.setImageResource(R.drawable.ic_search_blue_24dp)
+
+        var aux = "1"
+
+        view.btn_pesquisar.setOnClickListener {
+            var content = view.searchbar.text.toString()
+
+
+            var titulo_parametro = view.titulo_parametro.text.toString()
+
+
+            content.let {
+                if(content.isNotEmpty()){
+                    view.hideKeyboard()
+
+                    if(titulo_parametro==null){
+                        titulo_parametro = ""
+                    }
+
+
+                    val kotlinFragment = FragmentTexto.newInstance(content,titulo_parametro,aux)
+
+                    (activity as SecondActivity).replaceFragment(kotlinFragment)
+                }
             }
         }
 
-
-        view.constraintclick.setOnClickListener {
-            // view.constraintclick.hideKeyboard()
-        }
-
-        view.searchbar.setOnFocusChangeListener { _, _ -> view.imagePesquisa.setImageResource(R.drawable.ic_search_black_24dp) }
+        val step = 1
+        val max = 10
+        val min = 1
+        view.seekBar.setMax((max - min) / step)
 
 
-        view.imagePesquisa.setOnClickListener {
-            var aux = view.searchbar.text.toString()
+        view.seekBar.setOnSeekBarChangeListener(
+            object : OnSeekBarChangeListener {
+                override fun onStopTrackingTouch(seekBar: SeekBar) {}
 
-            val result = aux
+                override fun onStartTrackingTouch(seekBar: SeekBar) {}
 
-            view.imagePesquisa.hideKeyboard()
+                override fun onProgressChanged(
+                    seekBar: SeekBar, progress: Int,
+                    fromUser: Boolean
+                ) {
+                    // Ex :
+                    // And finally when you want to retrieve the value in the range you
+                    // wanted in the first place -> [3-5]
+                    //
+                    // if progress = 13 -> value = 3 + (13 * 0.1) = 4.3
+                    val value = (min + progress * step).toDouble().toInt()
+                    aux = value.toString()
+                    view.info.text = value.toString() + "-gram"
 
-            val kotlinFragment = FragmentTexto.newInstance(result)
+                }
+            }
+        )
 
-            (activity as SecondActivity).replaceFragment(kotlinFragment)
-        }
+
+//        view.imagePesquisa.setOnClickListener {
+//            var aux = view.searchbar.text.toString()
+//
+//            val result = aux
+//
+//            view.imagePesquisa.hideKeyboard()
+//
+//            val kotlinFragment = FragmentTexto.newInstance(result)
+//
+//            (activity as SecondActivity).replaceFragment(kotlinFragment)
+//        }
         return view
     }
 

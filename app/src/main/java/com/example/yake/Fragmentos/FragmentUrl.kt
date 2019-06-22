@@ -44,6 +44,11 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
 
         val url = arguments?.getString("url")
 
+        var ngram = arguments?.getString("ngram")
+
+        if(ngram == null){
+            ngram = "1"
+        }
 
         view.linear_vis.visibility = View.INVISIBLE
         // faz com que o utilizador nao consiga carregar enquanto faz load
@@ -56,7 +61,7 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
         view.spin_kit.visibility = View.VISIBLE
 
             val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
-            call = service!!.search_keywords_url(url!!,"2","20")
+            call = service!!.search_keywords_url(url!!,ngram.toInt(),20)
             call?.enqueue(object : Callback<Example_Yake> {
 
 
@@ -83,7 +88,7 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
                         var jsonString = gson.toJson(examples)
 
 
-                        var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,"")
+                        var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,"","")
                         var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
 
                         adapter.addFragment(fragmento1, "Annotated Text")
@@ -177,9 +182,10 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
 
 
     companion object {
-        fun newInstance(url: String): FragmentUrl {
+        fun newInstance(url: String,ngram : String): FragmentUrl {
             val args = Bundle()
             args.putString("url", url)
+            args.putString("ngram", ngram)
             val fragment = FragmentUrl()
             fragment.arguments = args
             return fragment

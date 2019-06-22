@@ -43,7 +43,15 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
 
 
         val texto = arguments?.getString("texto")
+        var titulo = arguments?.getString("titulo")
+        var ngram = arguments?.getString("ngram")
 
+        if(ngram == null){
+            ngram = "1"
+        }
+        if(titulo==null){
+            titulo=""
+        }
 
         view.linear_vis.visibility = View.INVISIBLE
         // faz com que o utilizador nao consiga carregar enquanto faz load
@@ -56,7 +64,7 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
         view.spin_kit.visibility = View.VISIBLE
 
         val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
-        call = service!!.search_keywords_texto(texto!!,"2","20")
+        call = service!!.search_keywords_texto(texto!!,titulo,ngram.toInt(),20)
         call?.enqueue(object : Callback<Example_Yake> {
 
 
@@ -83,7 +91,7 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
                     var jsonString = gson.toJson(examples)
 
 
-                    var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,texto)
+                    var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,texto,titulo)
                     var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
 
                     adapter.addFragment(fragmento1, "Annotated Text")
@@ -177,9 +185,11 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
 
 
     companion object {
-        fun newInstance(texto: String): FragmentTexto {
+        fun newInstance(texto: String,titulo : String, ngram : String): FragmentTexto {
             val args = Bundle()
             args.putString("texto", texto)
+            args.putString("titulo", titulo)
+            args.putString("ngram", ngram)
             val fragment = FragmentTexto()
             fragment.arguments = args
             return fragment
