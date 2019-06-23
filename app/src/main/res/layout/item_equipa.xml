@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:id="@+id/parent_layout"
+
+
+>
+    <View
+            style="@style/InputBorder"
+            android:id="@+id/breaLine"
+    />
+    <de.hdodenhof.circleimageview.CircleImageView
+
+            android:layout_below="@id/breaLine"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/image"
+            android:src="@drawable/linkdin_image"
+            android:layout_centerHorizontal="true"
+            app:civ_border_color="#4FC1EA"
+            app:civ_border_width="2dp"
+
+    />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="João Ricado Antunes Pires"
+            android:layout_below="@id/image"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="15dp"
+            android:id="@+id/nome"
+            android:textColor="#000000"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+    />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOFTWARE DEVELOPER AND RESEARCHER"
+            android:layout_below="@id/nome"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:id="@+id/cargo"
+            android:textColor="#000000"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+    />
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/cargo"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginTop="5dp"
+                  android:id="@+id/linearButtons">
+
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginEnd="70dp"
+                android:id="@+id/img_linkedin"/>
+        <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/img_github"/>
+        <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/web"
+                android:id="@+id/img_web"/>
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/img_mail"
+        />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

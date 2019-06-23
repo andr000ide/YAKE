@@ -38,4 +38,16 @@
     <string name="key_pesquisar_url">Search by Url</string>
     <string name="key_pesquisar_texto">Search by Text</string>
     <string name="loading_wordcloud">The Wordcloud is loading...</string>
+    <string name="know_team">know the team</string>
+    <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
+        LIAAD INESC TEC, University of Porto and University of Kyoto. \n
+    </string>
+    <string name="creditos_texto">Tell me Stories app has been developed by Simão Samouco and João Campos under the
+        supervision of Professor Ricardo Campos in the scope of the Final Project of the Computer Science degree of the
+        Polytechnic Institute of Tomar, Portugal.
+    </string>
+    <string name="mobile_developer">MOBILE DEVELOPER</string>
+    <string name="cargo_resea_prof">PROFESSOR AND RESEARCHER</string>
+    <string name="cargo_soft_resea">SOFTWARE DEVELOPER AND RESEARCHER</string>
+    <string name="cargo_commuticaions">COMMUNICATIONS</string>
 </resources>

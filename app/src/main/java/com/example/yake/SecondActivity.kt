@@ -9,10 +9,7 @@ import android.view.KeyEvent
 import android.view.MenuItem
 import com.example.yake.Auxiliares.EndDrawerToggle
 import com.example.yake.Auxiliares.LangHelper
-import com.example.yake.Fragmentos.FragmentAgradecimentos
-import com.example.yake.Fragmentos.Fragment_Contacts
-import com.example.yake.Fragmentos.FragmentoPesquisarTexto
-import com.example.yake.Fragmentos.FragmentoPesquisarURL
+import com.example.yake.Fragmentos.*
 import kotlinx.android.synthetic.main.activity_second.*
 
 
@@ -113,7 +110,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 R.id.nav_four -> {
                     supportFragmentManager.beginTransaction().replace(
                         R.id.fragment_container,
-                        BlankFragment()
+                        Fragment_Equipa()
                     )
                         .addToBackStack("4").commit()
                     check = R.id.nav_four

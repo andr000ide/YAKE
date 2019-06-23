@@ -45,4 +45,16 @@
     <string name="key_pesquisar_url">Pesquisar por Url</string>
     <string name="key_pesquisar_texto">Pesquisar por Texto</string>
     <string name="loading_wordcloud">A Worldcloud está a carregar...</string>
+    <string name="know_team">conheça a equipa</string>
+    <string name="equipaTexto">Este projeto foi desenvolvido por investigadores afiliados ao Politécnico de Tomar, LIAAD
+        INESC TEC, Universidade do Porto e Universidade de Kyoto.
+    </string>
+    <string name="creditos_texto">A app do Conta-me Histórias foi desenvolvida por Simão Samouco e João Campos sob
+        supervisão do Professor Ricardo Campos no âmbito do Projeto Final do Curso de Engenharia Informática do
+        Instituto Politécnico de Tomar, Portugal
+    </string>
+    <string name="mobile_developer">DESENVOLVEDOR MÓVEL</string>
+    <string name="cargo_resea_prof">PROFESSOR E INVESTIGADOR</string>
+    <string name="cargo_soft_resea">DESENVOLVEDOR DE SOFTWARE E INVESTIGADOR</string>
+    <string name="cargo_commuticaions">COMUNICAÇÕES</string>
 </resources>
