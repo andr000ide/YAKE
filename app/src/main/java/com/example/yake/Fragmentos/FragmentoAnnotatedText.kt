@@ -1,15 +1,23 @@
 package com.example.yake.Fragmentos
 
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.BackgroundColorSpan
+import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.yake.Auxiliares.RetrofitWordCloudInstance
 import com.example.yake.Auxiliares.ServiceAPI
+import com.example.yake.Models.Example_Yake
 import com.example.yake.Models.Wordcloud
 import com.example.yake.R
 import com.example.yake.SecondActivity
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.fragment_wordcloud.view.*
 import kotlinx.android.synthetic.main.fragmento_annotatedtext.view.*
 import retrofit2.Call
@@ -33,9 +41,70 @@ class FragmentoAnnotatedText : androidx.fragment.app.Fragment() {
         var texto = arguments?.getString("texto")
         var titulo = arguments?.getString("titulo")
 
-        view.titulo.text=titulo
 
-        view.texto_anotado.text = texto
+        if(titulo!!.isEmpty()){
+            view.titulo.visibility=View.GONE
+        }else{
+            view.titulo.text=titulo
+            view.titulo.visibility=View.VISIBLE
+        }
+
+
+        val gson = Gson()
+        val turnsType = object : TypeToken<Example_Yake>() {}.type
+        var testModel = gson.fromJson<Example_Yake>(jsonarray, turnsType)
+
+        println(testModel)
+
+        var listaPalavras = mutableListOf<String>()
+        for(item in testModel.keywords){
+            listaPalavras.add(item.ngram)
+        }
+
+
+        val mainString = texto!!.toLowerCase()
+        //val subString = "Soon"
+
+
+        val spannableString = SpannableString(texto)
+
+        for(palavra in listaPalavras){
+            val mutableList = mutableListOf<Int>()
+            var index = 0;
+            while(index != -1){
+                index = mainString!!.indexOf(palavra, index);
+                if (index != -1) {
+                    mutableList.add(index);
+                    index++;
+                }
+            }
+
+
+
+
+            if (mainString!!.contains(palavra)) {
+                for(item in mutableList){
+                    val endIndex = item + palavra.length
+                    spannableString.setSpan(
+                        BackgroundColorSpan(Color.parseColor("#ffffff")), item, endIndex,
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                    )
+                    spannableString.setSpan(
+                        ForegroundColorSpan(Color.parseColor("#000000")), item, endIndex,
+                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                    )
+                }
+
+            }
+
+
+        }
+        view.texto_anotado.setText(spannableString)
+
+
+
+
+        //view.texto_anotado.text = texto
 
         //val activity = activity as SecondActivity
 

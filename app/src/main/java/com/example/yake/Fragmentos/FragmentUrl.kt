@@ -12,11 +12,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import com.example.yake.Auxiliares.LangHelper
-import com.example.yake.Auxiliares.RetrofitClientInstance
-import com.example.yake.Auxiliares.ServiceAPI
-import com.example.yake.Auxiliares.ViewPagerAdapter
+import com.example.yake.Auxiliares.*
 import com.example.yake.Models.Example_Yake
+import com.example.yake.Models.UrlExample
+import com.example.yake.Models.Wordcloud
 import com.example.yake.R
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_url.view.*
@@ -32,6 +31,7 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
     private var sharePath = "no"
     private var aux = 0
     lateinit var call: Call<Example_Yake>
+    lateinit var call2: Call<UrlExample>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,7 +47,7 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
         var ngram = arguments?.getString("ngram")
 
         if(ngram == null){
-            ngram = "1"
+            ngram = "3"
         }
 
         view.linear_vis.visibility = View.INVISIBLE
@@ -61,7 +61,7 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
         view.spin_kit.visibility = View.VISIBLE
 
             val service = RetrofitClientInstance.retrofitInstance?.create(ServiceAPI::class.java)
-            call = service!!.search_keywords_url(url!!,ngram.toInt(),20)
+            call = service!!.search_keywords_url(url!!,ngram.toInt(),15)
             call?.enqueue(object : Callback<Example_Yake> {
 
 
@@ -82,26 +82,49 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
                     }
                     examples?.let {
 
-                        println(examples)
 
-                        var gson = Gson()
-                        var jsonString = gson.toJson(examples)
+                        ////////////////////////////
+
+                        val service2 = RetrofitURLInstance.retrofitInstance?.create(ServiceAPI::class.java)
+                        call2 = service2!!.search_url(url!!)
+                        call2?.enqueue(object : Callback<UrlExample> {
+                            override fun onFailure(call: Call<UrlExample>, t: Throwable) {
+                                if (aux != 1) {
+                                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                                    withButtonCentered(view)
+                                }
+                            }
+
+                            override fun onResponse(call: Call<UrlExample>, response: Response<UrlExample>) {
+                                var urlExample = response.body()
+                                var gson = Gson()
+                                var jsonString = gson.toJson(examples)
 
 
-                        var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,"","")
-                        var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
+                                var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,urlExample!!.content!!,urlExample!!.title!!)
+                                var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
 
-                        adapter.addFragment(fragmento1, "Annotated Text")
-                        adapter.addFragment(fragmento2, "WordCloud")
-                        view.viewpager.adapter = adapter
-                        view.tabs.setupWithViewPager(view.viewpager)
+                                adapter.addFragment(fragmento1, "Annotated Text")
+                                adapter.addFragment(fragmento2, "WordCloud")
+                                view.viewpager.adapter = adapter
+                                view.tabs.setupWithViewPager(view.viewpager)
 
-                        view.linear_vis.visibility = View.VISIBLE
-                        view.spin_kit.visibility = View.INVISIBLE
+                                view.linear_vis.visibility = View.VISIBLE
+                                view.spin_kit.visibility = View.INVISIBLE
 
-                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
-                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                        view.view_grayscreen.visibility = View.GONE
+                                // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                                activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                                view.view_grayscreen.visibility = View.GONE
+                            }
+
+                        })
+
+
+
+                        ///////////////////////////
+
+
+
                     }
                 }
 
@@ -131,6 +154,11 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
             aux = 1
             activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
             call.cancel()
+        }
+        if (::call2.isInitialized) {
+            aux = 1
+            activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+            call2.cancel()
         }
     }
 

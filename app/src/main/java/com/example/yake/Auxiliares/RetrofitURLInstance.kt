@@ -1,11 +1,12 @@
 package com.example.yake.Auxiliares
-
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
-object RetrofitWordCloudInstance {
+
+object RetrofitURLInstance {
+    private var retrofit: Retrofit? = null
 
 
     var okHttpClient = OkHttpClient.Builder()
@@ -14,14 +15,12 @@ object RetrofitWordCloudInstance {
         .writeTimeout(15, TimeUnit.SECONDS)
         .build()
 
-
-    private var retrofit: Retrofit? = null
-
     val retrofitInstance: Retrofit?
         get() {
-            if (retrofit == null) {
+            if(retrofit ==null){
                 retrofit = retrofit2.Retrofit.Builder()
-                    .baseUrl("https://cloud-yake.herokuapp.com/")
+                    //.baseUrl("https://conta-https.herokuapp.com/")
+                    .baseUrl("https://text-url.herokuapp.com/")
                     .client(okHttpClient)
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build()

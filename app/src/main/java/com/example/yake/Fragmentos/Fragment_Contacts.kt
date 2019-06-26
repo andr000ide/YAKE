@@ -30,7 +30,7 @@ class Fragment_Contacts : Fragment() {
         var view =  inflater.inflate(R.layout.fragment_contacts, container, false)
 
         view.copiar_mail.setOnClickListener {
-            var mail = "admin@contamehistorias.pt"
+            var mail = "ricardo.campos@ipt.pt"
             val clipboard = context!!.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("copy text", mail)
             clipboard.primaryClip = clip

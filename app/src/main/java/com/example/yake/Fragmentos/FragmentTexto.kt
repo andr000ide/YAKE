@@ -47,7 +47,7 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
         var ngram = arguments?.getString("ngram")
 
         if(ngram == null){
-            ngram = "1"
+            ngram = "3"
         }
         if(titulo==null){
             titulo=""

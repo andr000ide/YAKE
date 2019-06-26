@@ -24,25 +24,21 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
         val view = inflater.inflate(R.layout.pesquisar_texto, container, false)
 
 
-        var aux = "1"
+        var aux = "3"
 
         view.btn_pesquisar.setOnClickListener {
             var content = view.searchbar.text.toString()
 
 
-            var titulo_parametro = view.titulo_parametro.text.toString()
 
 
             content.let {
                 if(content.isNotEmpty()){
                     view.hideKeyboard()
 
-                    if(titulo_parametro==null){
-                        titulo_parametro = ""
-                    }
 
 
-                    val kotlinFragment = FragmentTexto.newInstance(content,titulo_parametro,aux)
+                    val kotlinFragment = FragmentTexto.newInstance(content,"",aux)
 
                     (activity as SecondActivity).replaceFragment(kotlinFragment)
                 }
@@ -79,17 +75,6 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
         )
 
 
-//        view.imagePesquisa.setOnClickListener {
-//            var aux = view.searchbar.text.toString()
-//
-//            val result = aux
-//
-//            view.imagePesquisa.hideKeyboard()
-//
-//            val kotlinFragment = FragmentTexto.newInstance(result)
-//
-//            (activity as SecondActivity).replaceFragment(kotlinFragment)
-//        }
         return view
     }
 

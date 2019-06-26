@@ -1,6 +1,7 @@
 package com.example.yake.Auxiliares
 
 import com.example.yake.Models.Example_Yake
+import com.example.yake.Models.UrlExample
 import com.example.yake.Models.Wordcloud
 import retrofit2.Call
 import retrofit2.http.*
@@ -16,6 +17,9 @@ interface ServiceAPI {
     @GET("?")
     fun search_cloud(@Query("width") width : String,@Query("height") height : String,@Query("json") json : String) : Call<Wordcloud>
 
+
+    @GET("search?")
+    fun search_url(@Query("url")url : String) : Call <UrlExample>
 
     @FormUrlEncoded
     @POST("extract_keywords?")

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/backgroundMainCoiso"
+            android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+
+
+        <TextView
+                android:id="@+id/titulo_1"
+                android:gravity="center"
+                android:layout_margin="15dp"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="algo"/>
+
+
+        <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:fillColor="#777777"
+                app:pageColor="#FFFFFF"
+                app:radius="6dp"
+                app:slideInterval="10000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp"/>
+
+
+        <TextView
+                android:id="@+id/titulo_2"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_margin="15dp"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="algo"/>
+
+
+        <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:fillColor="#777777"
+                app:pageColor="#FFFFFF"
+                app:radius="6dp"
+                app:slideInterval="10000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp"/>
+
+        <TextView
+                android:id="@+id/titulo_3"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_margin="15dp"
+                android:textSize="25sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="algo"/>
+
+        <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:fillColor="#777777"
+                app:pageColor="#FFFFFF"
+                app:radius="6dp"
+                app:slideInterval="10000"
+                app:strokeColor="#FF777777"
+                android:layout_marginBottom="10dp"
+                app:strokeWidth="1dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

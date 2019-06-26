@@ -28,11 +28,10 @@ class FragmentoPesquisarURL : androidx.fragment.app.Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.pesquisar_url, container, false)
 
-        var aux = "1"
+        var aux = "3"
         view.constraintclick.setOnFocusChangeListener { _, _ ->
             run {
                 view.constraintclick.hideKeyboard()
-                view.imagePesquisa.setImageResource(R.drawable.ic_search_blue_24dp)
             }
         }
 
@@ -41,7 +40,6 @@ class FragmentoPesquisarURL : androidx.fragment.app.Fragment() {
             // view.constraintclick.hideKeyboard()
         }
 
-        view.searchbar.setOnFocusChangeListener { _, _ ->  view.imagePesquisa.setImageResource(R.drawable.ic_search_black_24dp) }
 
 
         view.imagePesquisa.setOnClickListener {
