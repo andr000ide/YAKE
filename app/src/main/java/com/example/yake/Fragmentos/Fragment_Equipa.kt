@@ -30,8 +30,8 @@ class Fragment_Equipa : androidx.fragment.app.Fragment() {
         membrosArr.add(MembroEquipa(nome = "Arian Pasquali", linkedin = "https://www.linkedin.com/in/arianpasquali/", mail = "arrp@inesctec.pt",   github = "https://github.com/arianpasquali",web = "",imagemUrl = R.drawable.arian, cargo = getString(R.string.cargo_soft_resea)))
         membrosArr.add(MembroEquipa(nome = "Vitor Mangaravite", linkedin = "https://www.linkedin.com/in/v%C3%ADtor-mangaravite-81998222/", mail = "vima@inesctec.pt",   github = "https://github.com/vitordouzi",web = "",imagemUrl = R.drawable.vitor, cargo = getString(R.string.cargo_soft_resea)))
         membrosArr.add(MembroEquipa(nome = "Alípio Jorge", linkedin = "https://www.linkedin.com/in/al%C3%ADpio-jorge-29085813/", mail = "amjorge@fc.up.pt",   github = "",web = "http://www.dcc.fc.up.pt/~amjorge/",imagemUrl = R.drawable.alipio, cargo = getString(R.string.cargo_resea_prof)))
+        membrosArr.add(MembroEquipa(nome = "Célia Nunes", linkedin = "https://www.linkedin.com/in/c%C3%A9lia-nunes-7523a968/", mail = "celian@ubi.pt",   github = "",web = "http://www.mat.ubi.pt/~celia/",imagemUrl = R.drawable.celia, cargo = getString(R.string.cargo_commuticaions)))
         membrosArr.add(MembroEquipa(nome = "Adam Jatowt", linkedin = "https://www.linkedin.com/in/adam-jatowt-a1869b4/", mail = "adam@dl.kuis.kyoti-u.ac.jp",   github = "",web = "http://www.dl.kuis.kyoto-u.ac.jp/~adam/",imagemUrl = R.drawable.adam, cargo = getString(R.string.cargo_resea_prof)))
-        membrosArr.add(MembroEquipa(nome = "Livia Stroschoen", linkedin = "https://www.linkedin.com/in/liviastroschoen/", mail = "liviapinent@gmail.com",   github = "",web = "",imagemUrl = R.drawable.livia, cargo = getString(R.string.cargo_commuticaions)))
 
         view.rec_view.setNestedScrollingEnabled(false)
         view.rec_view.apply {

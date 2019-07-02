@@ -42,7 +42,7 @@ class FragmentAgradecimentos() : Fragment() {
             ContextCompat.startActivity(activity!!.applicationContext, intent, null)
         }
         view.ola3.setOnClickListener {
-            var link: String = "https://www.kyoto-u.ac.jp/en/"
+            var link: String = "https://www.ubi.pt/"
             var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
 
             ContextCompat.startActivity(activity!!.applicationContext, intent, null)
@@ -60,8 +60,20 @@ class FragmentAgradecimentos() : Fragment() {
             ContextCompat.startActivity(activity!!.applicationContext, intent, null)
         }
 
+        view.ola6.setOnClickListener {
+            var link: String = "https://www.kyoto-u.ac.jp/en/"
+            var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+
+            ContextCompat.startActivity(activity!!.applicationContext, intent, null)
+        }
+        view.ola7.setOnClickListener {
+            var link: String = "https://www.fct.pt/"
+            var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+
+            ContextCompat.startActivity(activity!!.applicationContext, intent, null)
+        }
         // view.texto_outros.setText(Html.fromHtml(getString(R.string.outros_texto),3))
-        view.texto_outros.movementMethod = LinkMovementMethod.getInstance()
+        //view.texto_outros.movementMethod = LinkMovementMethod.getInstance()
 
         return view
     }

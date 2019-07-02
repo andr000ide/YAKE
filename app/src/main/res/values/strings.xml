@@ -26,7 +26,7 @@
     <string name="financiamento_texto">Este projeto foi parcialmente financiado pelo projeto “TEC4Growth - Pervasive
         Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é
         financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund
-        (ERDF).
+        (ERDF) e por fundos nacionais da FCT - Fundação da Ciência e Tecnologia ao abrido do UID/MAT/00212/2013
     </string>
     <string name="outros">Outros</string>
     <string name="outros_texto">Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e
@@ -38,8 +38,7 @@
     <string name="liaad_url">https://www.inesctec.pt/pt</string>
     <string name="mail_foi_copiado">" O email foi copiado."</string>
     <string name="contactos">contactos</string>
-    <string name="contactos_texto">Para qualquer questão relacionada com o Conta-me Histórias por favor contactar-nos
-        através do seguinte email:
+    <string name="contactos_texto">Para qualquer questão relacionada com o YAKE por favor contactar Ricardo Campos através do seguinte email:
     </string>
     <string name="copiar_mail">Copiar Mail</string>
     <string name="key_pesquisar_url">Pesquisar por Url</string>
@@ -49,7 +48,7 @@
     <string name="equipaTexto">Este projeto foi desenvolvido por investigadores afiliados ao Politécnico de Tomar, LIAAD
         INESC TEC, Universidade do Porto e Universidade de Kyoto.
     </string>
-    <string name="creditos_texto">A app do Conta-me Histórias foi desenvolvida por Simão Samouco e João Campos sob
+    <string name="creditos_texto">A app do YAKE foi desenvolvida por Simão Samouco e João Campos sob
         supervisão do Professor Ricardo Campos no âmbito do Projeto Final do Curso de Engenharia Informática do
         Instituto Politécnico de Tomar, Portugal
     </string>
@@ -57,4 +56,9 @@
     <string name="cargo_resea_prof">PROFESSOR E INVESTIGADOR</string>
     <string name="cargo_soft_resea">DESENVOLVEDOR DE SOFTWARE E INVESTIGADOR</string>
     <string name="cargo_commuticaions">COMUNICAÇÕES</string>
+    <string name="media_inesctec_texto" translatable="false"> <a>O artigo intitulado “A Text Feature Based Automatic Keyword Extraction Method for Single Documents”, da autoria de Ricardo Campos, Vitor Mangaravite, Arian Pasquali e Alípio M. Jorge, investigadores do Laboratório de Inteligência Artificial e Apoio à Decisão (LIAAD) do INESC TEC, Célia Nunes, da Universidade da Beira Interior (UBI), e Adam Jatowt, da Universidade de Kyoto, venceu o prémio Best Short Paper Award, promovido na conferência</a> &lt;a href="https://www.ecir2018.org/">ECIR’18 - 40th European Conference on Information Retrieval&lt;/a> .
+    </string>
+    <string name="media_pt_titulo1" translatable="false"> &lt;a href="http://bip.inesctec.pt/192/noticia-pd02.html" >Equipa INESC TEC vence mais um Best Paper Award&lt;/a></string>
+    <string name="media_pt_titulo2" translatable="false"> &lt;a href="https://www.ubi.pt/Noticia/6250" >Conferência Internacional premeia trabalho de investigadores da UBI&lt;/a></string>
+    <string name="media_en_titulo1" translatable="false"> &lt;a href="https://www.inesctec.pt/en/news/inesc-tec-team-wins-another-best-paper-award#about" >INESC TEC team wins another Best Paper Award&lt;/a></string>
 </resources>

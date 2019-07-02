@@ -48,7 +48,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             if (indicator.equals("try")) {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.fragment_container,
-                    BlankFragment()
+                    FragmentExemplos()
                 )
                     .addToBackStack("1").commit()
                 navView?.setCheckedItem(R.id.nav_one)
@@ -83,7 +83,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     if (check != R.id.nav_one) {
                         supportFragmentManager.beginTransaction().replace(
                             R.id.fragment_container,
-                            BlankFragment()
+                            FragmentExemplos()
                         )
                             .addToBackStack("1").commit()
                         check = R.id.nav_one
@@ -138,7 +138,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 }
                 R.id.nav_nine  -> {
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
-                        BlankFragment()
+                        Fragment_Media()
                     )
                         .addToBackStack("9").commit()
                     check = R.id.nav_nine

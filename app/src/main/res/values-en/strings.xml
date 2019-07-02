@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="menu_exemplos">Examples</string>
     <string name="menu_pesquisar">Search by text</string>
     <string name="menu_sobre">About</string>
@@ -21,7 +21,7 @@
     <string name="financiamento_texto">This project was partially funded by Project “TEC4Growth - Pervasive
         Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” which is
         financed by the NORTE 2020, under the PORTUGAL 2020 Partnership Agreement, and through the European Regional
-        Development Fund (ERDF).
+        Development Fund (ERDF) and by national founds of FCT-Foundation for Science and Technology under UID/MAT/00212/2013
     </string>
     <string name="outros">Others</string>
     <string name="outros_texto">
@@ -33,7 +33,7 @@
     <string name="liaad_url">https://www.inesctec.pt/en</string>
     <string name="mail_foi_copiado">" Mail has been copied"</string>
     <string name="contactos">contact</string>
-    <string name="contactos_texto">For any inquires please contact us at:</string>
+    <string name="contactos_texto">For any inquires please contact at:</string>
     <string name="copiar_mail">Copy Mail</string>
     <string name="key_pesquisar_url">Search by Url</string>
     <string name="key_pesquisar_texto">Search by Text</string>
@@ -42,7 +42,7 @@
     <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
         LIAAD INESC TEC, University of Porto and University of Kyoto. \n
     </string>
-    <string name="creditos_texto">Tell me Stories app has been developed by Simão Samouco and João Campos under the
+    <string name="creditos_texto">YAKE\'s app has been developed by Simão Samouco and João Campos under the
         supervision of Professor Ricardo Campos in the scope of the Final Project of the Computer Science degree of the
         Polytechnic Institute of Tomar, Portugal.
     </string>
@@ -50,4 +50,5 @@
     <string name="cargo_resea_prof">PROFESSOR AND RESEARCHER</string>
     <string name="cargo_soft_resea">SOFTWARE DEVELOPER AND RESEARCHER</string>
     <string name="cargo_commuticaions">COMMUNICATIONS</string>
+
 </resources>

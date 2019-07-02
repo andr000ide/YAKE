@@ -51,18 +51,35 @@
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                        app:layout_constraintTop_toBottomOf="@id/ola1"
                        app:layout_constraintStart_toStartOf="parent"
-                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintBottom_toTopOf="@id/ola6"
                        app:layout_constraintEnd_toStartOf="@id/ola4"
                        android:id="@+id/ola3"
-                       android:background="@drawable/kyoto_tamanho"/>
+                       android:background="@drawable/ubi_agradecimentos"/>
 
             <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
                        app:layout_constraintTop_toBottomOf="@id/ola2"
                        app:layout_constraintStart_toEndOf="@id/ola3"
                        app:layout_constraintEnd_toEndOf="parent"
-                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintBottom_toTopOf="@id/ola6"
                        android:id="@+id/ola4"
                        android:background="@drawable/liaad_tamanho"/>
+
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                       android:id="@+id/ola6"
+                       app:layout_constraintTop_toBottomOf="@id/ola4"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toStartOf="@id/ola7"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:src="@drawable/kyoto_tamanho"
+            />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                       android:id="@+id/ola7"
+                       app:layout_constraintTop_toBottomOf="@id/ola4"
+                       app:layout_constraintStart_toEndOf="@id/ola6"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:src="@drawable/fct_agradecimentos"
+            />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -90,24 +107,6 @@
                    android:layout_marginRight="18dp"
                    android:id="@+id/ola5"
         />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/outros"
-                  android:layout_marginTop="15dp"
-                  android:layout_marginBottom="8dp"
-                  android:layout_marginLeft="18dp"
-                  android:layout_marginRight="18dp"
-                  android:textSize="25sp"
-        />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginLeft="18dp"
-                  android:layout_marginRight="18dp"
-                  android:layout_marginBottom="18dp"
-                  android:textSize="15sp"
-                  android:textColorLink="@color/backgroundMain"
-                  android:id="@+id/texto_outros"
-                  android:text="@string/outros_texto"/>
     </LinearLayout>
 
 

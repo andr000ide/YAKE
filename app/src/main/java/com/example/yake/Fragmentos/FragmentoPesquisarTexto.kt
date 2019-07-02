@@ -24,6 +24,11 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
         val view = inflater.inflate(R.layout.pesquisar_texto, container, false)
 
 
+        var textoparam = arguments?.getString("texto")
+        if(textoparam!=null){
+            view.searchbar.setText(textoparam.toString())
+        }
+
         var aux = "3"
 
         view.btn_pesquisar.setOnClickListener {
@@ -82,6 +87,17 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
     fun View.hideKeyboard() {
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(windowToken, 0)
+    }
+
+
+    companion object {
+        fun newInstance(texto: String): FragmentoPesquisarTexto {
+            val args = Bundle()
+            args.putString("texto",texto)
+            val fragment = FragmentoPesquisarTexto()
+            fragment.arguments = args
+            return fragment
+        }
     }
 
 

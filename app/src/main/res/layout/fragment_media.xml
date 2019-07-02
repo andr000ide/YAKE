@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:tools="http://schemas.android.com/tools"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Media"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:paddingTop="15dp"
+                android:textSize="35dp"
+                android:textStyle="bold"
+        />
+        <View
+                style="@style/InputBorder"
+                android:id="@+id/breaLine2"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+        />
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instituições"
+                android:textColor="@color/backgroundMainCoiso"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="28sp"
+                android:textStyle="bold"
+        />
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rec_view">
+        </androidx.recyclerview.widget.RecyclerView>
+        <View
+                style="@style/InputBorder"
+                android:id="@+id/breaLine"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+        />
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

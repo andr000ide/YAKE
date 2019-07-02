@@ -35,7 +35,6 @@ class Fragment_Contacts : Fragment() {
             val clip = ClipData.newPlainText("copy text", mail)
             clipboard.primaryClip = clip
             context!!.toast(mail +"\n"+ getString(R.string.mail_foi_copiado))
-
         }
 
         return view
