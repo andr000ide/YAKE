@@ -6,7 +6,7 @@
     <string name="menu_equipa">Team</string>
     <string name="lingua">Português</string>
     <string name="key_description">Description algo bla bla</string>
-    <string name="key_title">YAKE</string>
+    <string name="key_title">YAKE!</string>
     <string name="key_search">Search</string>
     <string name="key_try">Try</string>
     <string name="key_teste">something</string>
@@ -50,5 +50,22 @@
     <string name="cargo_resea_prof">PROFESSOR AND RESEARCHER</string>
     <string name="cargo_soft_resea">SOFTWARE DEVELOPER AND RESEARCHER</string>
     <string name="cargo_commuticaions">COMMUNICATIONS</string>
-
+    <string name="sobre_yake">YAKE! is keyword extractor capable of automatically identifying the most relevant words in a document.</string>
+    <string name="sobre_software"><a>O YAKE! is available at</a> &lt;a
+        href="https://play.google.com/store/apps">Google Play&lt;/a> <a>,</a> &lt;a
+        href="http://yake.inesctec.pt/">online&lt;/a> <a>and on </a> &lt;a
+        href="https://github.com/LIAAD/yake">Github&lt;/a> <a>thourgh which we make available a Python package</a></string>
+    <string name="sobre_contributions">As the amount of information generated increases, reading and summarizing large texts becomes a particularly difficult task. The need to automate this process requires the development of keyword extraction systems with the ability to automatically identify the most relevant words in a text. YAKE! appears in this context as an important contribution to a large number of tasks and a multiplicity of situations in which the extraction of relevant words plays a fundamental role.</string>
+    <string name="sobre_howdoesitwork">YAKE! is an unsupervised automatic keyword extraction method (independent of dictionaries, thesauri or external data) which rests on text statistical features extracted from single documents to select the most important keywords of a text, thus making it easily applicable to documents of different sizes, domains, or languages.</string>
+    <string name="sobre_awards"><a>Winner of the Best Short Paper at the 40th European Conference on Information Retrieval</a> (&lt;a href="http://www.ecir2018.org/">ECIR’18&lt;/a>).</string>
+    <string name="sobreReferenciasT01">YAKE! is a research product. If you use it in a work that leads to a scientific publication, research project or product, please cite the following references: &lt;br/>&lt;br/></string>
+    <string name="sobreReferenciasT02"><a>Campos, R., Mangaravite, V., Pasquali, A., Jorge, A., Nunes, C., Jatowt, A. (2018).</a> &lt;a href="https://link.springer.com/chapter/10.1007/978-3-319-76941-7_63"> A Text Feature Based Automatic Keyword Extraction Method for Single Documents.&lt;/a><a> In Gabriella Pasi et al. (Eds.), Lecture Notes in Computer Science - Advances in Information Retrieval - 40th European Conference on Information Retrieval (ECIR\'18). Grenoble, France. March 26 – 29. Vol. 10772(2018), pp. 684 - 691.</a>&lt;br/>&lt;br/></string>
+    <string name="sobreReferenciasT03"><a>Campos, R., Mangaravite, V., Pasquali, A., Jorge, A., Nunes, C., Jatowt, A. (2018).</a> &lt;a href="https://link.springer.com/chapter/10.1007/978-3-319-76941-7_80">  YAKE! Collection-independent Automatic Keyword Extractor.&lt;/a><a> In Gabriella Pasi et al. (Eds.), Lecture Notes in Computer Science - Advances in Information Retrieval - 40th European Conference on Information Retrieval (ECIR\'18). Grenoble, France. March 26 – 29. Vol. 10772(2018), pp. 806 - 810.</a></string>
+    <string name="sobreContributions_title">Contributions</string>
+    <string name="sobreHowdoesitwork_title">How does it work?</string>
+    <string name="sobreAwards_title">Awards</string>
+    <string name="sobreReferences_title">References</string>
+    <string name="pesquisar">Search</string>
+    <string name="exemplos_ingles">English samples</string>
+    <string name="exemplos_outros">Other languages samples</string>
 </resources>

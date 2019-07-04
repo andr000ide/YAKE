@@ -102,7 +102,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 R.id.nav_three -> {
                     supportFragmentManager.beginTransaction().replace(
                         R.id.fragment_container,
-                        BlankFragment()
+                        FragmentSobre()
                     )
                         .addToBackStack("3").commit()
                     check = R.id.nav_three

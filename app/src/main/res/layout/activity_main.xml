@@ -46,7 +46,7 @@
             app:layout_constraintTop_toBottomOf="@id/descricao"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="pesquisar url"/>
+            android:text="@string/key_pesquisar_url"/>
 
     <Button android:id="@+id/btn_texto"
             android:layout_marginTop="25dp"
@@ -59,7 +59,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/Btn_try"
-            android:text="Pesquisar texto"/>
+            android:text="@string/key_pesquisar_texto"/>
 
     <Button android:id="@+id/Btn_try"
             android:layout_marginTop="30dp"

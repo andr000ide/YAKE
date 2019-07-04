@@ -5,7 +5,7 @@
     <string name="menu_equipa">Equipa</string>
     <string name="lingua">English</string>
     <string name="key_description">Descrição algo bla bla</string>
-    <string name="key_title">YAKE</string>
+    <string name="key_title">YAKE!</string>
     <string name="key_search">Pesquisar</string>
     <string name="key_try">Experimentar</string>
     <string name="key_teste">algo</string>
@@ -61,4 +61,22 @@
     <string name="media_pt_titulo1" translatable="false"> &lt;a href="http://bip.inesctec.pt/192/noticia-pd02.html" >Equipa INESC TEC vence mais um Best Paper Award&lt;/a></string>
     <string name="media_pt_titulo2" translatable="false"> &lt;a href="https://www.ubi.pt/Noticia/6250" >Conferência Internacional premeia trabalho de investigadores da UBI&lt;/a></string>
     <string name="media_en_titulo1" translatable="false"> &lt;a href="https://www.inesctec.pt/en/news/inesc-tec-team-wins-another-best-paper-award#about" >INESC TEC team wins another Best Paper Award&lt;/a></string>
+    <string name="sobre_yake"><a>YAKE! é um extrator de palavras-chave capaz de identificar automaticamente as palavras mais relevantes de um documento.</a></string>
+    <string name="sobre_software"><a>O YAKE! encontra-se disponível no</a> &lt;a
+        href="https://play.google.com/store/apps">Google Play&lt;/a> <a>,</a> &lt;a
+        href="http://yake.inesctec.pt/">online&lt;/a> <a>e no </a> &lt;a
+        href="https://github.com/LIAAD/yake">Github&lt;/a> <a>plataforma através da qual disponibilizamos uma biblioteca Python.</a></string>
+    <string name="sobre_contributions"><a>À medida que a quantidade de informações gerada aumenta, a leitura e o resumo de textos de grandes dimensões torna-se uma tarefa particularmente difícil. A necessidade de automatizar esse tipo de tarefas exige o desenvolvimento de sistemas de extração de palavras-chave com a capacidade de identificar automaticamente as palavras mais relevantes de um texto. O YAKE! surge, neste contexto, como um importante contributo para um grande número de tarefas e uma multiplicidade de situações em que a extração de palavras relevantes desempenha um papel fundamental.</a></string>
+    <string name="sobre_howdoesitwork"><a>YAKE! é um método de extração automático não supervisionado de palavras-chave (independente de dicionários, tesauros ou dados externos) que se baseia em estatísticas extraídas a partir de um texto para selecionar as palavras mais relevantes, tornando-se assim facilmente aplicável a documentos de diferentes tamanhos, domínios ou idiomas.</a></string>
+    <string name="sobre_awards"><a>Vencedor do Best Short Paper na  40th European Conference on Information Retrieval</a>(&lt;a href="http://www.ecir2018.org/">ECIR’18&lt;/a>).</string>
+    <string name="sobreReferenciasT01">O YAKE! é um produto de investigação científica. Por favor cite os seguintes trabalhos se usar o YAKE! no âmbito de uma publicação científica, projeto de investigação ou produto: &lt;br/>&lt;br/></string>
+    <string name="sobreReferenciasT02"><a>Campos, R., Mangaravite, V., Pasquali, A., Jorge, A., Nunes, C., Jatowt, A. (2018).</a> &lt;a href="https://link.springer.com/chapter/10.1007/978-3-319-76941-7_63"> A Text Feature Based Automatic Keyword Extraction Method for Single Documents.&lt;/a><a> In Gabriella Pasi et al. (Eds.), Lecture Notes in Computer Science - Advances in Information Retrieval - 40th European Conference on Information Retrieval (ECIR\'18). Grenoble, France. March 26 – 29. Vol. 10772(2018), pp. 684 - 691.</a>&lt;br/>&lt;br/></string>
+    <string name="sobreReferenciasT03"><a>Campos, R., Mangaravite, V., Pasquali, A., Jorge, A., Nunes, C., Jatowt, A. (2018).</a> &lt;a href="https://link.springer.com/chapter/10.1007/978-3-319-76941-7_80"> YAKE! Collection-independent Automatic Keyword Extractor.&lt;/a><a> In Gabriella Pasi et al. (Eds.), Lecture Notes in Computer Science - Advances in Information Retrieval - 40th European Conference on Information Retrieval (ECIR\'18). Grenoble, France. March 26 – 29. Vol. 10772(2018), pp. 806 - 810.</a></string>
+    <string name="sobreContributions_title">Contribuições</string>
+    <string name="sobreHowdoesitwork_title">Como é que funciona?</string>
+    <string name="sobreAwards_title">Prémios</string>
+    <string name="sobreReferences_title">Referências Bibliográficas</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="exemplos_ingles">Exemplos Inglês</string>
+    <string name="exemplos_outros">Exemplos outras línguas</string>
 </resources>

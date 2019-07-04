@@ -38,7 +38,7 @@ class Fragment_Media : androidx.fragment.app.Fragment() {
                     titulo = getString(R.string.media_en_titulo1),
                     texto = "The paper entitled “A Text Feature Based Automatic Keyword Extraction Method for Single Documents” by Ricardo Campos, Vitor Mangaravite, Arian Pasquali and Alípio M. Jorge, researchers from INESC TEC’s Artificial Intelligence and Decision Support Laboratory (LIAAD) and by Célia Nunes from the University of Beira Interior (UBI), and by Adam Jatowt from Kyoto University, won the ECIR 2018 Best Short Paper Award, promoted by the 40th European Conference on Information Retrieval.",
                     link = "https://www.inesctec.pt/en/news/inesc-tec-team-wins-another-best-paper-award#about",
-                    img = R.drawable.img_github
+                    img = R.drawable.inesctec_media
                 )
             )
 
@@ -49,7 +49,7 @@ class Fragment_Media : androidx.fragment.app.Fragment() {
                     titulo = getString(R.string.media_pt_titulo1),
                     texto = getString(R.string.media_inesctec_texto),
                     link = "http://bip.inesctec.pt/192/noticia-pd02.html",
-                    img = R.drawable.img_github
+                    img = R.drawable.bip
                 )
             )
             mediaArr.add(
@@ -58,7 +58,7 @@ class Fragment_Media : androidx.fragment.app.Fragment() {
                     titulo = getString(R.string.media_pt_titulo2),
                     texto = "Prémio de Best Short Paper Award atribuído em evento de recuperação de informação (Information Retrieval), que decorreu em França.",
                     link = "https://www.ubi.pt/Noticia/6250",
-                    img = R.drawable.img_github
+                    img = R.drawable.ubi_media
                 )
             )
 

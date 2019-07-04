@@ -17,7 +17,7 @@
                 android:textColor="#ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="algo"/>
+                android:text="@string/exemplos_ingles"/>
 
 
         <com.synnapps.carouselview.CarouselView
@@ -41,7 +41,7 @@
                 android:textSize="25sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="algo2"/>
+                android:text="@string/exemplos_outros"/>
 
 
         <com.synnapps.carouselview.CarouselView
