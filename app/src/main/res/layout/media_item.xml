@@ -8,8 +8,8 @@
     <View
             style="@style/InputBorder"
             android:id="@+id/breaLine"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
     />
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -28,20 +28,25 @@
                   android:layout_height="wrap_content"
                   android:text="Ep. 580 Ricardo Campos – “Conta-me histórias”, o arquivo de notícias que permite viajar pelo tempo"
                   android:textSize="16sp"
+                  android:textColorLink="@color/backgroundMain"
                   android:layout_marginStart="20dp"
                   android:layout_marginEnd="20dp"
-                  android:layout_marginTop="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:layout_marginTop="20dp"
                   android:id="@+id/titulo"/>
+
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:text="Mais que um arquivo de sites e notícias em português, esta plataforma permite ao utilizador pesquisar por um certo tema e acompanhar a sua evolução ao longo do tempo."
                   android:layout_marginStart="20dp"
                   android:layout_marginEnd="20dp"
+                  android:layout_marginBottom="10dp"
                   android:layout_marginTop="5dp"
                   android:id="@+id/texto"
         />
         <ImageView android:layout_width="match_parent"
                    android:layout_height="wrap_content"
+                   android:layout_marginTop="15dp"
                    android:id="@+id/media_img"
                    android:paddingTop="5dp"/>
     </LinearLayout>
