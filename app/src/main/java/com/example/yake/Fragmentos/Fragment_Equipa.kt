@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_equipa.view.*
 class Fragment_Equipa : androidx.fragment.app.Fragment() {
 
     val membrosArr : ArrayList<MembroEquipa> = ArrayList()
+    val membrosArr2 : ArrayList<MembroEquipa> = ArrayList()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,6 +34,10 @@ class Fragment_Equipa : androidx.fragment.app.Fragment() {
         membrosArr.add(MembroEquipa(nome = "Célia Nunes", linkedin = "https://www.linkedin.com/in/c%C3%A9lia-nunes-7523a968/", mail = "celian@ubi.pt",   github = "",web = "http://www.mat.ubi.pt/~celia/",imagemUrl = R.drawable.celia, cargo = getString(R.string.cargo_commuticaions)))
         membrosArr.add(MembroEquipa(nome = "Adam Jatowt", linkedin = "https://www.linkedin.com/in/adam-jatowt-a1869b4/", mail = "adam@dl.kuis.kyoti-u.ac.jp",   github = "",web = "http://www.dl.kuis.kyoto-u.ac.jp/~adam/",imagemUrl = R.drawable.adam, cargo = getString(R.string.cargo_resea_prof)))
 
+
+        membrosArr2.add(MembroEquipa(nome = "Simão Neves Samouco", linkedin = "https://www.linkedin.com/in/sim%C3%A3o-samouco-48916915b/", mail = "simao.samouco@hotmail.com",   github = "https://github.com/simaosamouco",web = "",imagemUrl = R.drawable.simao, cargo = getString(R.string.mobile_developer)))
+        membrosArr2.add(MembroEquipa(nome = "João Campos", linkedin = "https://www.linkedin.com/in/jo%C3%A3o-ricardo-campos-869918167/", mail = "joaoracampos@gmail.com",   github = "https://github.com/andr000ide",web = "",imagemUrl = R.drawable.joao, cargo = getString(R.string.mobile_developer)))
+
         view.rec_view.setNestedScrollingEnabled(false)
         view.rec_view.apply {
             // set a LinearLayoutManager to handle Android
@@ -42,17 +47,25 @@ class Fragment_Equipa : androidx.fragment.app.Fragment() {
             adapter = EquipaAdapter(membrosArr, context!!)
         }
 
+        view.rec_view_nos.setNestedScrollingEnabled(false)
+        view.rec_view_nos.apply {
+            // set a LinearLayoutManager to handle Android
+            // RecyclerView behavior
+            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
+            // set the custom adapter to the RecyclerView
+            adapter = EquipaAdapter(membrosArr2, context!!)
+        }
 
-        Picasso.get().load(R.drawable.joao).into(view.image)
-        Picasso.get().load(R.drawable.simao).into(view.image2)
-
-        Picasso.get().load(R.drawable.img_github).into(view.img_github_joao)
-        Picasso.get().load(R.drawable.linkdin_image).into(view.img_linkedin_joao)
-        Picasso.get().load(R.drawable.mail_image).into(view.img_mail_joao)
-
-        Picasso.get().load(R.drawable.img_github).into(view.img_github2_simao)
-        Picasso.get().load(R.drawable.linkdin_image).into(view.img_linkedin2_simao)
-        Picasso.get().load(R.drawable.mail_image).into(view.img_mail2_simao)
+//        Picasso.get().load(R.drawable.joao).into(view.image)
+//        Picasso.get().load(R.drawable.simao).into(view.image2)
+//
+//        Picasso.get().load(R.drawable.img_github).into(view.img_github_joao)
+//        Picasso.get().load(R.drawable.linkdin_image).into(view.img_linkedin_joao)
+//        Picasso.get().load(R.drawable.mail_image).into(view.img_mail_joao)
+//
+//        Picasso.get().load(R.drawable.img_github).into(view.img_github2_simao)
+//        Picasso.get().load(R.drawable.linkdin_image).into(view.img_linkedin2_simao)
+//        Picasso.get().load(R.drawable.mail_image).into(view.img_mail2_simao)
 
         view.linearlayout.isNestedScrollingEnabled=false
 

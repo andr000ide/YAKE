@@ -100,7 +100,7 @@
               app:layout_constraintBottom_toTopOf="@id/constraint_seekbar"
               app:layout_constraintStart_toStartOf="parent"
               android:textColor="#FFFFFF"
-              android:text="Inform max ngram size:" android:gravity="center" android:textSize="25sp"/>
+              android:text="@string/key_maxngram" android:gravity="center" android:textSize="25sp"/>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

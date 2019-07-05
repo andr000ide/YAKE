@@ -150,6 +150,13 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                         .addToBackStack("10").commit()
                     check = R.id.nav_ten
                 }
+                R.id.nav_eleven  -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                        Fragment_RelatedProjects()
+                    )
+                        .addToBackStack("11").commit()
+                    check = R.id.nav_eleven
+                }
             }
 
             drawer?.closeDrawer(GravityCompat.END)
@@ -221,6 +228,10 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     "10" -> {
                         navView?.setCheckedItem(R.id.nav_ten)
                         check=R.id.nav_ten
+                    }
+                    "11" -> {
+                        navView?.setCheckedItem(R.id.nav_eleven)
+                        check=R.id.nav_eleven
                     }
                 }
 

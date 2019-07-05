@@ -35,6 +35,10 @@
               android:title="Media">
 
         </item>
+        <item android:id="@+id/nav_eleven"
+              android:icon="@drawable/ic_map_black_24dp"
+              android:title="@string/key_relatedprojects">
+        </item>
         <item android:id="@+id/nav_eight"
               android:icon="@drawable/ic_import_contacts_black_24dp"
               android:title="@string/key_contactos">

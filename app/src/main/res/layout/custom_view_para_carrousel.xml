@@ -17,6 +17,7 @@
                       android:orientation="vertical">
 
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:padding="5dp"
                       android:id="@+id/titulo_noticia1"
                       android:layout_gravity="center"
                       android:gravity="center_horizontal"
@@ -37,6 +38,7 @@
                       android:orientation="vertical">
 
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:padding="5dp"
                       android:layout_gravity="center"
                       android:gravity="center_horizontal"
                       android:textSize="24sp"

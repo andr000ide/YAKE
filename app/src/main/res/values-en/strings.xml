@@ -5,7 +5,7 @@
     <string name="menu_sobre">About</string>
     <string name="menu_equipa">Team</string>
     <string name="lingua">Português</string>
-    <string name="key_description">Description algo bla bla</string>
+    <string name="key_description">Yet another keyword extractor</string>
     <string name="key_title">YAKE!</string>
     <string name="key_search">Search</string>
     <string name="key_try">Try</string>
@@ -68,4 +68,6 @@
     <string name="pesquisar">Search</string>
     <string name="exemplos_ingles">English samples</string>
     <string name="exemplos_outros">Other languages samples</string>
+    <string name="key_relatedprojects">Related Projects</string>
+    <string name="key_maxngram">Inform max ngram size:</string>
 </resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/backgroundMain"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/titulo"
+                  android:textColor="#FFFFFF"
+                  android:layout_marginTop="20dp"
+                  android:layout_marginBottom="40dp"
+                  android:text="Related Projects" android:gravity="center" android:textSize="40sp"/>
+
+        <Button android:id="@+id/btn_pketoolkit"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/initial_page_button"
+                android:text="pke Toolkit"/>
+
+
+        <Button android:id="@+id/btn_dockerizedyake"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/initial_page_button"
+                android:text="Dockerized Yake"/>
+
+        <Button android:id="@+id/btn_dendro"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/initial_page_button"
+                android:text="Dendro"/>
+
+        <Button android:id="@+id/btn_contamehistorias"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/initial_page_button"
+                android:text="Conta-me Histórias"/>
+
+        <Button android:id="@+id/btn_kaggle"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/initial_page_button"
+                android:text="Kaggle"/>
+    </LinearLayout>
+    
+</ScrollView>

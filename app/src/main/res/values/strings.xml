@@ -4,7 +4,7 @@
     <string name="menu_sobre">Sobre</string>
     <string name="menu_equipa">Equipa</string>
     <string name="lingua">English</string>
-    <string name="key_description">Descrição algo bla bla</string>
+    <string name="key_description">Yet another keyword extractor</string>
     <string name="key_title">YAKE!</string>
     <string name="key_search">Pesquisar</string>
     <string name="key_try">Experimentar</string>
@@ -79,4 +79,6 @@
     <string name="pesquisar">Pesquisar</string>
     <string name="exemplos_ingles">Exemplos Inglês</string>
     <string name="exemplos_outros">Exemplos outras línguas</string>
+    <string name="key_relatedprojects">Projetos Relacionados</string>
+    <string name="key_maxngram">Informar tamanho máximo do ngram:</string>
 </resources>
