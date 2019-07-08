@@ -85,7 +85,7 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
                 }
                 examples?.let {
 
-                    println(examples)
+
 
                     var gson = Gson()
                     var jsonString = gson.toJson(examples)

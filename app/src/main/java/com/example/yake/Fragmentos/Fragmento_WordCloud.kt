@@ -56,20 +56,26 @@ class Fragmento_WordCloud : androidx.fragment.app.Fragment() {
                             override fun onResponse(call: Call<Wordcloud>, response: Response<Wordcloud>) {
                                 val outronome = response.body()
 
+                                if(response.message().equals("Service Unavailable")){
+                                    view.textowordcloud.text = getString(R.string.key_error_wordcloud)
+                                }
+                                else{
+                                    val decodedstring =
+                                        android.util.Base64.decode(outronome?.wordcloudb64, android.util.Base64.DEFAULT)
+                                    val decodedByte = BitmapFactory.decodeByteArray(decodedstring, 0, decodedstring.size)
+                                    val atividade = activity as SecondActivity
+                                    //atividade.imagemtestar.setImageBitmap(decodedByte)
+                                    view.wordCloud.setImageBitmap(decodedByte)
+                                    view.textowordcloud.visibility = View.GONE
+                                    view.wordCloud.visibility = View.VISIBLE
+                                }
                                 //val decodedstring = Base64.getDecoder().decode(outronome?.wordcloudb64)
-                                val decodedstring =
-                                    android.util.Base64.decode(outronome?.wordcloudb64, android.util.Base64.DEFAULT)
-                                val decodedByte = BitmapFactory.decodeByteArray(decodedstring, 0, decodedstring.size)
-                                val atividade = activity as SecondActivity
-                                //atividade.imagemtestar.setImageBitmap(decodedByte)
-                                view.wordCloud.setImageBitmap(decodedByte)
-                                view.textowordcloud.visibility = View.GONE
-                                view.wordCloud.visibility = View.VISIBLE
+
 
                             }
 
                             override fun onFailure(call: Call<Wordcloud>, t: Throwable) {
-                                println("onerror")
+                                view.textowordcloud.text = "Error a carregar a wordcloud"
                             }
                         })
                     }

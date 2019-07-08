@@ -84,4 +84,5 @@
     <string name="error_message">Erro inesperado Tente novamente mais tarde.
         com outra pesquisa.
     </string>
+    <string name="key_error_wordcloud">Erro a carregar a Wordcloud</string>
 </resources>

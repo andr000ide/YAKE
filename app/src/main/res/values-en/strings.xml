@@ -72,4 +72,5 @@
     <string name="key_maxngram">Inform max ngram size:</string>
     <string name="error_message">Unexpected Error. Try again later.
     </string>
+    <string name="key_error_wordcloud">Error loading Wordcloud</string>
 </resources>
