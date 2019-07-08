@@ -200,7 +200,7 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
 
         val builder = AlertDialog.Builder(context)
         builder.setTitle("Error")
-        builder.setMessage("Não foram encontrados resultados suficientes para a pesquisa efetuada. Tente novamente com outra pesquisa.")
+        builder.setMessage(getString(R.string.error_message))
         //builder.setPositiveButton("OK", DialogInterface.OnClickListener(function = x))
 
         builder.setNeutralButton("Ok") { dialog, which ->

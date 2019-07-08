@@ -70,4 +70,6 @@
     <string name="exemplos_outros">Other languages samples</string>
     <string name="key_relatedprojects">Related Projects</string>
     <string name="key_maxngram">Inform max ngram size:</string>
+    <string name="error_message">Unexpected Error. Try again later.
+    </string>
 </resources>
