@@ -8,7 +8,7 @@
     <string name="key_description">Yet another keyword extractor</string>
     <string name="key_title">YAKE!</string>
     <string name="key_search">Search</string>
-    <string name="key_try">Try</string>
+    <string name="key_try">See Examples</string>
     <string name="key_teste">something</string>
     <string name="key_agradecimentos">Acknowledgements</string>
     <string name="key_contactos">Contacts</string>
@@ -18,10 +18,7 @@
         da página). Coloquem todos menos o último (o four eyes). Esse é para ser colocado no item a seguir
     </string>
     <string name="financiamento">Funding</string>
-    <string name="financiamento_texto">This project was partially funded by Project “TEC4Growth - Pervasive
-        Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” which is
-        financed by the NORTE 2020, under the PORTUGAL 2020 Partnership Agreement, and through the European Regional
-        Development Fund (ERDF) and by national founds of FCT-Foundation for Science and Technology under UID/MAT/00212/2013
+    <string name="financiamento_texto">This work was partially funded by Project “TEC4Growth - Pervasive Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” which was financed by the NORTE 2020, under the PORTUGAL 2020, as well as by the European Regional Development Fund (ERDF) through the COMPETE 2020 Programme within project POCI-01-0145-FEDER-006961, and by National Funds through the FCT as part of project UID/EEA/50014/2013 and of the project UID/MAT/00212/2013.
     </string>
     <string name="outros">Others</string>
     <string name="outros_texto">
@@ -33,14 +30,15 @@
     <string name="liaad_url">https://www.inesctec.pt/en</string>
     <string name="mail_foi_copiado">" Mail has been copied"</string>
     <string name="contactos">contact</string>
-    <string name="contactos_texto">For any inquires please contact at:</string>
+    <string name="contactos_texto">For any inquires please contact Ricardo Campos at:</string>
     <string name="copiar_mail">Copy Mail</string>
-    <string name="key_pesquisar_url">Search by Url</string>
-    <string name="key_pesquisar_texto">Search by Text</string>
+    <string name="key_pesquisar_url">Specify Url</string>
+    <string name="key_pesquisar_texto">Free Text Input</string>
+    <string name="key_pesquisar_texto2">Get keywords from Text</string>
     <string name="loading_wordcloud">The Wordcloud is loading...</string>
     <string name="know_team">know the team</string>
     <string name="equipaTexto">This project was developed by researchers affiliated to Polytechnic Institute of Tomar,
-        LIAAD INESC TEC, University of Porto and University of Kyoto. \n
+        LIAAD INESC TEC, University of Porto, University of Beira Interior and University of Kyoto. \n
     </string>
     <string name="creditos_texto">YAKE\'s app has been developed by Simão Samouco and João Campos under the
         supervision of Professor Ricardo Campos in the scope of the Final Project of the Computer Science degree of the
@@ -48,13 +46,14 @@
     </string>
     <string name="mobile_developer">MOBILE DEVELOPER</string>
     <string name="cargo_resea_prof">PROFESSOR AND RESEARCHER</string>
+    <string name="cargo_resea_profa">PROFESSOR AND RESEARCHER</string>
     <string name="cargo_soft_resea">SOFTWARE DEVELOPER AND RESEARCHER</string>
     <string name="cargo_commuticaions">COMMUNICATIONS</string>
     <string name="sobre_yake">YAKE! is keyword extractor capable of automatically identifying the most relevant words in a document.</string>
-    <string name="sobre_software"><a>O YAKE! is available at</a> &lt;a
-        href="https://play.google.com/store/apps">Google Play&lt;/a> <a>,</a> &lt;a
+    <string name="sobre_software"><a>YAKE! is available at</a> &lt;a
+        href="https://play.google.com/store/apps">Google Play&lt;/a><a>,</a> &lt;a
         href="http://yake.inesctec.pt/">online&lt;/a> <a>and on </a> &lt;a
-        href="https://github.com/LIAAD/yake">Github&lt;/a> <a>thourgh which we make available a Python package</a></string>
+        href="https://github.com/LIAAD/yake">Github&lt;/a> <a>through which we make available a Python package.</a></string>
     <string name="sobre_contributions">As the amount of information generated increases, reading and summarizing large texts becomes a particularly difficult task. The need to automate this process requires the development of keyword extraction systems with the ability to automatically identify the most relevant words in a text. YAKE! appears in this context as an important contribution to a large number of tasks and a multiplicity of situations in which the extraction of relevant words plays a fundamental role.</string>
     <string name="sobre_howdoesitwork">YAKE! is an unsupervised automatic keyword extraction method (independent of dictionaries, thesauri or external data) which rests on text statistical features extracted from single documents to select the most important keywords of a text, thus making it easily applicable to documents of different sizes, domains, or languages.</string>
     <string name="sobre_awards"><a>Winner of the Best Short Paper at the 40th European Conference on Information Retrieval</a> (&lt;a href="http://www.ecir2018.org/">ECIR’18&lt;/a>).</string>
@@ -66,11 +65,21 @@
     <string name="sobreAwards_title">Awards</string>
     <string name="sobreReferences_title">References</string>
     <string name="pesquisar">Search</string>
-    <string name="exemplos_ingles">English samples</string>
-    <string name="exemplos_outros">Other languages samples</string>
+    <string name="exemplos_ingles">Texts in English</string>
+    <string name="exemplos_outros">Texts in other languages</string>
     <string name="key_relatedprojects">Related Projects</string>
-    <string name="key_maxngram">Inform max ngram size:</string>
+    <string name="key_maxngram">Inform maximum keyword size</string>
     <string name="error_message">Unexpected Error. Try again later.
     </string>
     <string name="key_error_wordcloud">Error loading Wordcloud</string>
+    <string name="key_url_titulo">Get keywords from URL</string>
+    <string name="key_hint_url">paste url here</string>
+    <string name="key_default_termos">3-terms</string>
+    <string name="key_hint_texto">paste text here</string>
+    <string name="key_search_texto">Extract Keywords</string>
+    <string name="key_projects">Related Projects</string>
+    <string name="key_related_projects_tellmestoires">Tell me Stories</string>
+    <string name="key_keywords">Keywords</string>
+    <string name="key_annotated_text">Annotated Text</string>
+    <string name="key_wordcloud">Word Cloud</string>
 </resources>

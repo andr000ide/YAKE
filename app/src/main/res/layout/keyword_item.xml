@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#ffffff"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Antena 1"
+              android:textSize="18sp"
+              android:layout_marginStart="20dp"
+              android:textStyle="bold"
+              android:id="@+id/keyword"
+              android:paddingTop="9dp"
+              android:paddingBottom="9dp"
+    />
+    <View
+            style="@style/InputBorder2"
+            android:id="@+id/linha"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+    />
+</LinearLayout>

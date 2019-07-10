@@ -8,14 +8,19 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
+import com.example.yake.Auxiliares.LangHelper
 import com.example.yake.R
 import com.example.yake.SecondActivity
+import kotlinx.android.synthetic.main.pesquisar_texto.*
 import kotlinx.android.synthetic.main.pesquisar_texto.view.*
+import kotlinx.android.synthetic.main.pesquisar_texto.view.info
+import kotlinx.android.synthetic.main.pesquisar_texto.view.seekBar
+import kotlinx.android.synthetic.main.pesquisar_url.view.*
 import kotlinx.android.synthetic.main.pesquisar_url.view.searchbar
 
 
 class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
-
+    private lateinit var langHelper: LangHelper
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,7 +31,11 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
 
         var textoparam = arguments?.getString("texto")
         if(textoparam!=null){
+            view.titulo_texto.visibility = View.GONE
             view.searchbar.setText(textoparam.toString())
+        }
+        else{
+            view.titulo_texto.visibility = View.VISIBLE
         }
 
         var aux = "3"
@@ -49,6 +58,8 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
                 }
             }
         }
+
+        langHelper = LangHelper(activity!!.applicationContext)
 
         val step = 1
         val max = 10
@@ -73,7 +84,23 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
                     // if progress = 13 -> value = 3 + (13 * 0.1) = 4.3
                     val value = (min + progress * step).toDouble().toInt()
                     aux = value.toString()
-                    view.info.text = value.toString() + "-gram"
+                    if (langHelper.getLanguageSaved().equals("en")) {
+                        if(value == 1){
+                            view.info.text = value.toString() + "-term"
+                        }
+                        else{
+                            view.info.text = value.toString() + "-terms"
+                        }
+
+                    }
+                    else{
+                        if(value == 1){
+                            view.info.text = value.toString() + "-termo"
+                        }
+                        else{
+                            view.info.text = value.toString() + "-termos"
+                        }
+                    }
 
                 }
             }

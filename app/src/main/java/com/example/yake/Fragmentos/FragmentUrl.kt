@@ -103,11 +103,14 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
 
                                 var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,urlExample!!.content!!,urlExample!!.title!!)
                                 var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
+                                var fragmento3 = FragmentoKeywords.newInstance(jsonString)
 
-                                adapter.addFragment(fragmento1, "Annotated Text")
-                                adapter.addFragment(fragmento2, "WordCloud")
+                                adapter.addFragment(fragmento1, getString(R.string.key_annotated_text))
+                                adapter.addFragment(fragmento3, getString(R.string.key_keywords))
+                                adapter.addFragment(fragmento2, getString(R.string.key_wordcloud))
                                 view.viewpager.adapter = adapter
                                 view.tabs.setupWithViewPager(view.viewpager)
+                                view.viewpager.offscreenPageLimit = 3
 
                                 view.linear_vis.visibility = View.VISIBLE
                                 view.spin_kit.visibility = View.INVISIBLE

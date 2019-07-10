@@ -7,7 +7,7 @@
     <string name="key_description">Yet another keyword extractor</string>
     <string name="key_title">YAKE!</string>
     <string name="key_search">Pesquisar</string>
-    <string name="key_try">Experimentar</string>
+    <string name="key_try">Ver Exemplos</string>
     <string name="key_teste">algo</string>
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
@@ -23,10 +23,7 @@
         da página). Coloquem todos menos o último (o four eyes). Esse é para ser colocado no item a seguir
     </string>
     <string name="financiamento">Financiamento</string>
-    <string name="financiamento_texto">Este projeto foi parcialmente financiado pelo projeto “TEC4Growth - Pervasive
-        Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é
-        financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund
-        (ERDF) e por fundos nacionais da FCT - Fundação da Ciência e Tecnologia ao abrido do UID/MAT/00212/2013
+    <string name="financiamento_texto">Este projeto foi parcialmente financiado pelo projeto “TEC4Growth – Pervasive Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund (ERDF) através do programa COMPETE 2020 no âmbito do projeto POCI-01-0145-FEDER-006961, e por fundos nacionais da FCT – Fundação da Ciência e Tecnologia ao abrigo do UID/EEA/50014/2013 e do projeto UID/MAT/00212/2013.
     </string>
     <string name="outros">Outros</string>
     <string name="outros_texto">Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e
@@ -41,12 +38,12 @@
     <string name="contactos_texto">Para qualquer questão relacionada com o YAKE por favor contactar Ricardo Campos através do seguinte email:
     </string>
     <string name="copiar_mail">Copiar Mail</string>
-    <string name="key_pesquisar_url">Pesquisar por Url</string>
-    <string name="key_pesquisar_texto">Pesquisar por Texto</string>
+    <string name="key_pesquisar_url">Especifique Url</string>
+    <string name="key_pesquisar_texto">Introduza um texto</string>
+    <string name="key_pesquisar_texto2">Obtenha palavras-chave a partir de um Texto</string>
     <string name="loading_wordcloud">A Worldcloud está a carregar...</string>
     <string name="know_team">conheça a equipa</string>
-    <string name="equipaTexto">Este projeto foi desenvolvido por investigadores afiliados ao Politécnico de Tomar, LIAAD
-        INESC TEC, Universidade do Porto e Universidade de Kyoto.
+    <string name="equipaTexto">Este projeto foi desenvolvido por investigadores afiliados ao Instituto Politécnico de Tomar, LIAAD INESC TEC, Universidade do Porto, Universidade da Beira Interior e Universidade de Kyoto.
     </string>
     <string name="creditos_texto">A app do YAKE foi desenvolvida por Simão Samouco e João Campos sob
         supervisão do Professor Ricardo Campos no âmbito do Projeto Final do Curso de Engenharia Informática do
@@ -54,6 +51,7 @@
     </string>
     <string name="mobile_developer">DESENVOLVEDOR MÓVEL</string>
     <string name="cargo_resea_prof">PROFESSOR E INVESTIGADOR</string>
+    <string name="cargo_resea_profa">PROFESSORA E INVESTIGADORA</string>
     <string name="cargo_soft_resea">DESENVOLVEDOR DE SOFTWARE E INVESTIGADOR</string>
     <string name="cargo_commuticaions">COMUNICAÇÕES</string>
     <string name="media_inesctec_texto" translatable="false"> <a>O artigo intitulado “A Text Feature Based Automatic Keyword Extraction Method for Single Documents”, da autoria de Ricardo Campos, Vitor Mangaravite, Arian Pasquali e Alípio M. Jorge, investigadores do Laboratório de Inteligência Artificial e Apoio à Decisão (LIAAD) do INESC TEC, Célia Nunes, da Universidade da Beira Interior (UBI), e Adam Jatowt, da Universidade de Kyoto, venceu o prémio Best Short Paper Award, promovido na conferência</a> &lt;a href="https://www.ecir2018.org/">ECIR’18 - 40th European Conference on Information Retrieval&lt;/a> .
@@ -62,13 +60,13 @@
     <string name="media_pt_titulo2" translatable="false"> &lt;a href="https://www.ubi.pt/Noticia/6250" >Conferência Internacional premeia trabalho de investigadores da UBI&lt;/a></string>
     <string name="media_en_titulo1" translatable="false"> &lt;a href="https://www.inesctec.pt/en/news/inesc-tec-team-wins-another-best-paper-award#about" >INESC TEC team wins another Best Paper Award&lt;/a></string>
     <string name="sobre_yake"><a>YAKE! é um extrator de palavras-chave capaz de identificar automaticamente as palavras mais relevantes de um documento.</a></string>
-    <string name="sobre_software"><a>O YAKE! encontra-se disponível no</a> &lt;a
-        href="https://play.google.com/store/apps">Google Play&lt;/a> <a>,</a> &lt;a
+    <string name="sobre_software"><a>YAKE! encontra-se disponível no</a> &lt;a
+        href="https://play.google.com/store/apps">Google Play&lt;/a><a>,</a> &lt;a
         href="http://yake.inesctec.pt/">online&lt;/a> <a>e no </a> &lt;a
         href="https://github.com/LIAAD/yake">Github&lt;/a> <a>plataforma através da qual disponibilizamos uma biblioteca Python.</a></string>
     <string name="sobre_contributions"><a>À medida que a quantidade de informações gerada aumenta, a leitura e o resumo de textos de grandes dimensões torna-se uma tarefa particularmente difícil. A necessidade de automatizar esse tipo de tarefas exige o desenvolvimento de sistemas de extração de palavras-chave com a capacidade de identificar automaticamente as palavras mais relevantes de um texto. O YAKE! surge, neste contexto, como um importante contributo para um grande número de tarefas e uma multiplicidade de situações em que a extração de palavras relevantes desempenha um papel fundamental.</a></string>
     <string name="sobre_howdoesitwork"><a>YAKE! é um método de extração automático não supervisionado de palavras-chave (independente de dicionários, tesauros ou dados externos) que se baseia em estatísticas extraídas a partir de um texto para selecionar as palavras mais relevantes, tornando-se assim facilmente aplicável a documentos de diferentes tamanhos, domínios ou idiomas.</a></string>
-    <string name="sobre_awards"><a>Vencedor do Best Short Paper na  40th European Conference on Information Retrieval</a>(&lt;a href="http://www.ecir2018.org/">ECIR’18&lt;/a>).</string>
+    <string name="sobre_awards"><a>Vencedor do Best Short Paper na  40th European Conference on Information Retrieval</a> (&lt;a href="http://www.ecir2018.org/">ECIR’18&lt;/a>).</string>
     <string name="sobreReferenciasT01">O YAKE! é um produto de investigação científica. Por favor cite os seguintes trabalhos se usar o YAKE! no âmbito de uma publicação científica, projeto de investigação ou produto: &lt;br/>&lt;br/></string>
     <string name="sobreReferenciasT02"><a>Campos, R., Mangaravite, V., Pasquali, A., Jorge, A., Nunes, C., Jatowt, A. (2018).</a> &lt;a href="https://link.springer.com/chapter/10.1007/978-3-319-76941-7_63"> A Text Feature Based Automatic Keyword Extraction Method for Single Documents.&lt;/a><a> In Gabriella Pasi et al. (Eds.), Lecture Notes in Computer Science - Advances in Information Retrieval - 40th European Conference on Information Retrieval (ECIR\'18). Grenoble, France. March 26 – 29. Vol. 10772(2018), pp. 684 - 691.</a>&lt;br/>&lt;br/></string>
     <string name="sobreReferenciasT03"><a>Campos, R., Mangaravite, V., Pasquali, A., Jorge, A., Nunes, C., Jatowt, A. (2018).</a> &lt;a href="https://link.springer.com/chapter/10.1007/978-3-319-76941-7_80"> YAKE! Collection-independent Automatic Keyword Extractor.&lt;/a><a> In Gabriella Pasi et al. (Eds.), Lecture Notes in Computer Science - Advances in Information Retrieval - 40th European Conference on Information Retrieval (ECIR\'18). Grenoble, France. March 26 – 29. Vol. 10772(2018), pp. 806 - 810.</a></string>
@@ -77,12 +75,22 @@
     <string name="sobreAwards_title">Prémios</string>
     <string name="sobreReferences_title">Referências Bibliográficas</string>
     <string name="pesquisar">Pesquisar</string>
-    <string name="exemplos_ingles">Exemplos Inglês</string>
-    <string name="exemplos_outros">Exemplos outras línguas</string>
+    <string name="exemplos_ingles">Textos em Inglês</string>
+    <string name="exemplos_outros">Textos noutras línguas</string>
     <string name="key_relatedprojects">Projetos Relacionados</string>
-    <string name="key_maxngram">Informar tamanho máximo do ngram:</string>
+    <string name="key_maxngram">Informe tamanho máximo da palavra-chave</string>
     <string name="error_message">Erro inesperado Tente novamente mais tarde.
         com outra pesquisa.
     </string>
     <string name="key_error_wordcloud">Erro a carregar a Wordcloud</string>
+    <string name="key_url_titulo">Obtenha palavras-chave por URL</string>
+    <string name="key_hint_url">cole aqui o url</string>
+    <string name="key_default_termos">3-termos</string>
+    <string name="key_hint_texto">cole aqui o texto</string>
+    <string name="key_search_texto">Obter Palavras-Chave</string>
+    <string name="key_projects">Projetos Relacionados</string>
+    <string name="key_related_projects_tellmestoires">Conta-me Histórias</string>
+    <string name="key_keywords">Palavras Chave</string>
+    <string name="key_annotated_text">Texto Anotado</string>
+    <string name="key_wordcloud">Termos Relacionados</string>
 </resources>

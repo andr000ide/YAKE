@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import com.example.yake.Auxiliares.LangHelper
 import com.example.yake.R
 import kotlinx.android.synthetic.main.fragment_relatedprojects.*
 
 
 class Fragment_RelatedProjects : androidx.fragment.app.Fragment() {
+    private lateinit var langHelper: LangHelper
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,8 +25,24 @@ class Fragment_RelatedProjects : androidx.fragment.app.Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        langHelper = LangHelper(activity!!.applicationContext)
+        if (langHelper.getLanguageSaved().equals("en")) {
+            btn_contamehistorias.setOnClickListener {
+                var link: String = "http://tellmestories.pt/"
+                var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+                ContextCompat.startActivity(activity!!.applicationContext, intent, null)
+            }
+        }
+        else{
+            btn_contamehistorias.setOnClickListener {
+                var link: String = "http://contamehistorias.pt/arquivopt/"
+                var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+                ContextCompat.startActivity(activity!!.applicationContext, intent, null)
+            }
+        }
+
         btn_pketoolkit.setOnClickListener {
-            var link: String = "https://github.com/boudinfl/pke"
+            var link: String = "https://github.com/boudinfl/pke#implemented-models"
             var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
             ContextCompat.startActivity(activity!!.applicationContext, intent, null)
         }
@@ -35,11 +53,7 @@ class Fragment_RelatedProjects : androidx.fragment.app.Fragment() {
             ContextCompat.startActivity(activity!!.applicationContext, intent, null)
         }
 
-        btn_contamehistorias.setOnClickListener {
-            var link: String = "http://contamehistorias.pt/arquivopt/"
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
-            ContextCompat.startActivity(activity!!.applicationContext, intent, null)
-        }
+
 
         btn_dockerizedyake.setOnClickListener {
             var link: String = "https://github.com/LIAAD/yake#option-1-yake-as-a-cli-utility-inside-a-docker-container"

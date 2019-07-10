@@ -12,18 +12,9 @@
                   android:textColor="#FFFFFF"
                   android:layout_marginTop="20dp"
                   android:layout_marginBottom="40dp"
-                  android:text="Related Projects" android:gravity="center" android:textSize="40sp"/>
+                  android:text="@string/key_projects" android:gravity="center" android:textSize="40sp"/>
 
-        <Button android:id="@+id/btn_pketoolkit"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="#FFFFFF"
-                android:textSize="25sp"
-                android:layout_width="270dp"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:background="@drawable/initial_page_button"
-                android:text="pke Toolkit"/>
+
 
 
         <Button android:id="@+id/btn_dockerizedyake"
@@ -57,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:background="@drawable/initial_page_button"
-                android:text="Conta-me Histórias"/>
+                android:text="@string/key_related_projects_tellmestoires"/>
 
         <Button android:id="@+id/btn_kaggle"
                 android:layout_marginTop="25dp"
@@ -69,6 +60,17 @@
                 android:textAllCaps="false"
                 android:background="@drawable/initial_page_button"
                 android:text="Kaggle"/>
+
+        <Button android:id="@+id/btn_pketoolkit"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/initial_page_button"
+                android:text="pke Toolkit"/>
     </LinearLayout>
     
 </ScrollView>

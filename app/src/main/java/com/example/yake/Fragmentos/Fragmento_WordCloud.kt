@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.yake.Auxiliares.LangHelper
 import com.example.yake.Auxiliares.RetrofitWordCloudInstance
 import com.example.yake.Auxiliares.ServiceAPI
 import com.example.yake.Models.Wordcloud
@@ -23,7 +24,7 @@ import kotlin.concurrent.thread
 
 
 class Fragmento_WordCloud : androidx.fragment.app.Fragment() {
-
+    private lateinit var langHelper: LangHelper
     lateinit var call: Call<Wordcloud>
 
     override fun onCreateView(
@@ -32,11 +33,17 @@ class Fragmento_WordCloud : androidx.fragment.app.Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_wordcloud, container, false)
-        view.textowordcloud.visibility = View.VISIBLE
-        view.wordCloud.visibility = View.INVISIBLE
 
         var jsonarray = arguments?.getString("jsonYake")
+        langHelper = LangHelper(activity!!.applicationContext)
 
+        view.wordCloud.visibility=View.VISIBLE
+        if(langHelper.getLanguageSaved().equals("en")){
+            view.wordCloud.setImageResource(R.drawable.imagem_loading)
+        }
+        else{
+            view.wordCloud.setImageResource(R.drawable.imagem_acarregar)
+        }
 
 
 
@@ -57,7 +64,12 @@ class Fragmento_WordCloud : androidx.fragment.app.Fragment() {
                                 val outronome = response.body()
 
                                 if(response.message().equals("Service Unavailable")){
-                                    view.textowordcloud.text = getString(R.string.key_error_wordcloud)
+                                    if(langHelper.getLanguageSaved().equals("en")){
+                                        view.wordCloud.setImageResource(R.drawable.imagem_errorcarregar)
+                                    }
+                                    else{
+                                        view.wordCloud.setImageResource(R.drawable.imagem_errorcarregarpt)
+                                    }
                                 }
                                 else{
                                     val decodedstring =
@@ -66,8 +78,6 @@ class Fragmento_WordCloud : androidx.fragment.app.Fragment() {
                                     val atividade = activity as SecondActivity
                                     //atividade.imagemtestar.setImageBitmap(decodedByte)
                                     view.wordCloud.setImageBitmap(decodedByte)
-                                    view.textowordcloud.visibility = View.GONE
-                                    view.wordCloud.visibility = View.VISIBLE
                                 }
                                 //val decodedstring = Base64.getDecoder().decode(outronome?.wordcloudb64)
 
@@ -75,7 +85,12 @@ class Fragmento_WordCloud : androidx.fragment.app.Fragment() {
                             }
 
                             override fun onFailure(call: Call<Wordcloud>, t: Throwable) {
-                                view.textowordcloud.text = "Error a carregar a wordcloud"
+                                if(langHelper.getLanguageSaved().equals("en")){
+                                    view.wordCloud.setImageResource(R.drawable.imagem_errorcarregar)
+                                }
+                                else{
+                                    view.wordCloud.setImageResource(R.drawable.imagem_errorcarregarpt)
+                                }
                             }
                         })
                     }

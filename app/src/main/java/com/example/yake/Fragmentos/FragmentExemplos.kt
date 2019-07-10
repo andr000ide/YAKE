@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.layout_carossel.view.*
 
 class FragmentExemplos : androidx.fragment.app.Fragment() {
 
-    val tema = arrayOf("English sample 1", "English sample 2", "English sample 3", "English sample 4")
+    val tema = arrayOf("Kaggle", "GitLab", "Genius", "Technology")
     val tema2 = arrayOf(
         "Portuguese",
         "Italian",

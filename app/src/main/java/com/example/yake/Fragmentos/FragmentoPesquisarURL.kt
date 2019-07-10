@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.SeekBar
+import com.example.yake.Auxiliares.LangHelper
 import com.example.yake.R
 import com.example.yake.SecondActivity
 import kotlinx.android.synthetic.main.pesquisar_texto.view.*
@@ -20,7 +21,7 @@ import kotlinx.android.synthetic.main.pesquisar_url.view.seekBar
 
 
 class FragmentoPesquisarURL : androidx.fragment.app.Fragment() {
-
+    private lateinit var langHelper: LangHelper
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -55,6 +56,9 @@ class FragmentoPesquisarURL : androidx.fragment.app.Fragment() {
         }
 
 
+        langHelper = LangHelper(activity!!.applicationContext)
+
+
         val step = 1
         val max = 10
         val min = 1
@@ -78,7 +82,25 @@ class FragmentoPesquisarURL : androidx.fragment.app.Fragment() {
                     // if progress = 13 -> value = 3 + (13 * 0.1) = 4.3
                     val value = (min + progress * step).toDouble().toInt()
                     aux = value.toString()
-                    view.info.text = value.toString() + "-gram"
+                    if (langHelper.getLanguageSaved().equals("en")) {
+                        if(value == 1){
+                            view.info.text = value.toString() + "-term"
+                        }
+                        else{
+                            view.info.text = value.toString() + "-terms"
+                        }
+
+                    }
+                    else{
+                        if(value == 1){
+                            view.info.text = value.toString() + "-termo"
+                        }
+                        else{
+                            view.info.text = value.toString() + "-termos"
+                        }
+                    }
+
+
 
                 }
             }

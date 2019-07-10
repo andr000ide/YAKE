@@ -21,17 +21,17 @@
 
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
               app:layout_constraintTop_toTopOf="parent"
-              android:id="@+id/titulo"
+              android:id="@+id/titulo_texto"
               app:layout_constraintBottom_toBottomOf="parent"
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintEnd_toEndOf="parent"
               android:textColor="#FFFFFF"
               app:layout_constraintVertical_bias="0"
-              android:text="@string/key_pesquisar_texto" android:gravity="center" android:textSize="40sp"/>
+              android:text="@string/key_pesquisar_texto2" android:gravity="center" android:textSize="40sp"/>
 
 
         <EditText
-                app:layout_constraintTop_toBottomOf="@id/titulo"
+                app:layout_constraintTop_toBottomOf="@id/titulo_texto"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:minHeight="185dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_border"
-                android:hint="content"
+                android:hint="@string/key_hint_texto"
                 android:padding="10dp"
                 android:gravity="top"
                 android:id="@+id/searchbar" />
@@ -85,7 +85,7 @@
                   app:layout_constraintTop_toTopOf="parent"
                   app:layout_constraintBottom_toBottomOf="parent"
                   android:textColor="#FFFFFF"
-                  android:text="3-gram" android:gravity="center" android:textSize="25sp"/>
+                  android:text="@string/key_default_termos" android:gravity="center" android:textSize="25sp"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -97,11 +97,12 @@
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
+                android:padding="2dp"
                 android:background="@drawable/initial_page_button"
                 app:layout_constraintTop_toBottomOf="@id/constraint_seekbar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/pesquisar"/>
+                android:text="@string/key_search_texto"/>
 
 
 

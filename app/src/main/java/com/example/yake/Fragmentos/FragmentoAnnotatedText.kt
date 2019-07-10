@@ -61,6 +61,43 @@ class FragmentoAnnotatedText : androidx.fragment.app.Fragment() {
             listaPalavras.add(item.ngram)
         }
 
+        if(titulo.isNotEmpty()){
+            val mainTitulo = view.titulo.text.toString().toLowerCase()
+            val spannableString2 = SpannableString(titulo)
+
+            for(palavra in listaPalavras){
+                val mutableList = mutableListOf<Int>()
+                var index = 0;
+                while(index != -1){
+                    index = mainTitulo!!.indexOf(palavra, index);
+                    if (index != -1) {
+                        mutableList.add(index);
+                        index++;
+                    }
+                }
+
+                if (mainTitulo!!.contains(palavra)) {
+                    for(item in mutableList){
+                        val endIndex = item + palavra.length
+                        spannableString2.setSpan(
+                            BackgroundColorSpan(Color.parseColor("#ffffff")), item, endIndex,
+                            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                        )
+                        spannableString2.setSpan(
+                            ForegroundColorSpan(Color.parseColor("#000000")), item, endIndex,
+                            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+                        )
+                    }
+
+                }
+
+
+            }
+            view.titulo.setText(spannableString2)
+
+        }
+
+
 
         val mainString = texto!!.toLowerCase()
         //val subString = "Soon"

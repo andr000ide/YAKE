@@ -14,7 +14,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="sobre"
+                android:text="@string/menu_sobre"
                 android:textAlignment="center"
                 android:paddingTop="15dp"
                 android:textSize="35dp"

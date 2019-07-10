@@ -10,7 +10,7 @@
 
         <item android:id="@+id/nav_two"
               android:icon="@drawable/ic_search_black_24dp"
-              android:title="@string/menu_pesquisar"/>
+              android:title="@string/key_pesquisar_texto"/>
 
         <item android:id="@+id/nav_ten"
               android:icon="@drawable/ic_search_black_24dp"
