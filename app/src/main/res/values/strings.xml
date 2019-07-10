@@ -92,10 +92,11 @@
     <string name="key_related_projects_tellmestoires">Conta-me Histórias</string>
     <string name="key_keywords">Palavras Chave</string>
     <string name="key_annotated_text">Texto Anotado</string>
-    <string name="key_wordcloud">Termos Relacionados</string>
+    <string name="key_wordcloud">Termos\nRelacionados</string>
     <string name="key_button">Voltar</string>
     <string name="key_error_texto1_internal">Sistema com muita procura</string>
     <string name="key_error_texto2_internal">Já estamos a trabalhar nisso e esperamos que seja temporário. Por favor tente novamente mais tarde</string>
     <string name="key_error_texto1_vazio">URL está vazio</string>
     <string name="key_error_texto2_vazio">Coloque um URL e tente novamente</string>
+    <string name="key_texto_annotado">Texto anotado com recurso às top 10 palavras-chave mais relevantes</string>
 </resources>

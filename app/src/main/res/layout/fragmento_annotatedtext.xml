@@ -18,18 +18,29 @@
             android:clickable="true"
             android:layout_height="match_parent">
 
-
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                   app:layout_constraintTop_toTopOf="parent"
                   app:layout_constraintBottom_toTopOf="@id/titulo"
                   app:layout_constraintStart_toStartOf="parent"
                   app:layout_constraintEnd_toEndOf="parent"
                   android:textColor="#FFFFFF"
+                  android:id="@+id/titulo2"
+                  app:layout_constraintVertical_bias="0.1"
+                  android:text="@string/key_texto_annotado" android:gravity="center" android:textSize="25sp"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintBottom_toTopOf="@id/linear"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:paddingTop="10dp"
+                  android:textColor="#FFFFFF"
                   android:id="@+id/titulo"
                   app:layout_constraintVertical_bias="0.1"
-                  android:text="examplo titulo" android:gravity="center" android:textSize="40sp"/>
+                  android:text="examplo titulo" android:gravity="center" android:textSize="22sp"/>
 
         <LinearLayout
+                android:id="@+id/linear"
                 android:layout_marginRight="0dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginBottom="20dp"
@@ -50,7 +61,7 @@
                     android:textColor="#FFFFFF"
                     android:paddingTop="10dp"
                     android:text="@string/key_description"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     android:paddingBottom="20dp"/>
 
         </LinearLayout>

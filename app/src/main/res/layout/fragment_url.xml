@@ -22,6 +22,8 @@
         <com.google.android.material.tabs.TabLayout
                 android:layout_width="match_parent"
                 android:id="@+id/tabs"
+                app:tabPaddingStart="2dp"
+                app:tabPaddingEnd="2dp"
                 app:tabIndicatorColor="@color/colorPrimary"
                 android:layout_height="wrap_content"/>
 

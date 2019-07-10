@@ -88,4 +88,5 @@
     Please try again later</string>
     <string name="key_error_texto1_vazio">URL is empty</string>
     <string name="key_error_texto2_vazio">Input an URL and try again</string>
+    <string name="key_texto_annotado">Text annotated with the top 10 most relevant keywords</string>
 </resources>
