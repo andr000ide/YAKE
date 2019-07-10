@@ -2,16 +2,15 @@ package com.example.yake.Fragmentos
 
 
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.os.StrictMode
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.WindowManager
+import android.view.*
+import android.widget.Button
 import com.example.yake.Auxiliares.LangHelper
 import com.example.yake.Auxiliares.RetrofitClientInstance
 import com.example.yake.Auxiliares.ServiceAPI
@@ -20,6 +19,7 @@ import com.example.yake.Models.Example_Yake
 import com.example.yake.R
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_url.view.*
+import kotlinx.android.synthetic.main.layout_error.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -71,7 +71,12 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
             override fun onResponse(call: Call<Example_Yake>, response: Response<Example_Yake>) {
                 val examples = response.body()
                 if (response.message().equals("INTERNAL SERVER ERROR")) {
-                    withButtonCentered(view)
+                    view.linear_vis.visibility = View.VISIBLE
+                    view.spin_kit.visibility = View.INVISIBLE
+                    // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    view.view_grayscreen.visibility = View.GONE
+                    withButtonCentered(view,"internal")
                     //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
                     //activity!!.onBackPressed()
                 }
@@ -115,7 +120,7 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
             override fun onFailure(call: Call<Example_Yake>, t: Throwable) {
                 if (aux != 1) {
                     activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                    withButtonCentered(view)
+                    withButtonCentered(view,"failure")
                 }
             }
         })
@@ -200,17 +205,27 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
         }
     }
 
-    fun withButtonCentered(view: View) {
+    fun withButtonCentered(view: View,string : String) {
 
-        val builder = AlertDialog.Builder(context)
-        builder.setTitle("Error")
-        builder.setMessage(getString(R.string.error_message))
-        //builder.setPositiveButton("OK", DialogInterface.OnClickListener(function = x))
+        val dialog = Dialog(activity)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.layout_error)
+        dialog.window.setBackgroundDrawableResource(android.R.color.transparent)
 
-        builder.setNeutralButton("Ok") { dialog, which ->
+        if(string=="internal" || string=="failure"){
+            dialog.texto1.text = getString(R.string.key_error_texto1_internal)
+            dialog.texto2.text = getString(R.string.key_error_texto2_internal)
+        }
+
+
+        val button = dialog.findViewById(R.id.buttonOk) as Button
+
+        button.setOnClickListener {
+            dialog.dismiss()
             activity!!.onBackPressed()
         }
-        builder.show()
+        dialog.show()
     }
 
 

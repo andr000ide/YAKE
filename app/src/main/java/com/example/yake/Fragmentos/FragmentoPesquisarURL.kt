@@ -1,17 +1,17 @@
 package com.example.yake.Fragmentos
 
+import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.view.KeyEvent
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import android.widget.SeekBar
 import com.example.yake.Auxiliares.LangHelper
 import com.example.yake.R
 import com.example.yake.SecondActivity
+import kotlinx.android.synthetic.main.layout_error.*
 import kotlinx.android.synthetic.main.pesquisar_texto.view.*
 import kotlinx.android.synthetic.main.pesquisar_url.view.*
 import kotlinx.android.synthetic.main.pesquisar_url.view.constraintclick
@@ -47,12 +47,17 @@ class FragmentoPesquisarURL : androidx.fragment.app.Fragment() {
             var result = view.searchbar.text.toString()
 
 
-            //var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
-            view.imagePesquisa.hideKeyboard()
+            if(result.isNotEmpty()){
+                //var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
+                view.imagePesquisa.hideKeyboard()
 
-            val kotlinFragment = FragmentUrl.newInstance(result,aux)
+                val kotlinFragment = FragmentUrl.newInstance(result,aux)
 
-            (activity as SecondActivity).replaceFragment(kotlinFragment)
+                (activity as SecondActivity).replaceFragment(kotlinFragment)
+            }
+            else{
+                withButtonCentered()
+            }
         }
 
 
@@ -113,6 +118,25 @@ class FragmentoPesquisarURL : androidx.fragment.app.Fragment() {
     fun View.hideKeyboard() {
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(windowToken, 0)
+    }
+    fun withButtonCentered() {
+
+        val dialog = Dialog(activity)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.layout_error)
+        dialog.window.setBackgroundDrawableResource(android.R.color.transparent)
+
+        dialog.texto1.text = getString(R.string.key_error_texto1_vazio)
+        dialog.texto2.text = getString(R.string.key_error_texto2_vazio)
+
+
+        val button = dialog.findViewById(R.id.buttonOk) as Button
+
+        button.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
     }
 
 

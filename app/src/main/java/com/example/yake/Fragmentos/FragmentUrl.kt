@@ -2,16 +2,15 @@ package com.example.yake.Fragmentos
 
 
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.os.StrictMode
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.WindowManager
+import android.view.*
+import android.widget.Button
 import com.example.yake.Auxiliares.*
 import com.example.yake.Models.Example_Yake
 import com.example.yake.Models.UrlExample
@@ -19,6 +18,7 @@ import com.example.yake.Models.Wordcloud
 import com.example.yake.R
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_url.view.*
+import kotlinx.android.synthetic.main.layout_error.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -68,6 +68,11 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
                 override fun onResponse(call: Call<Example_Yake>, response: Response<Example_Yake>) {
                     val examples = response.body()
                     if (response.message().equals("INTERNAL SERVER ERROR")) {
+                        view.linear_vis.visibility = View.VISIBLE
+                        view.spin_kit.visibility = View.INVISIBLE
+                        // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                        activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                        view.view_grayscreen.visibility = View.GONE
                         withButtonCentered(view)
                         //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
                         //activity!!.onBackPressed()
@@ -225,15 +230,23 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
 
     fun withButtonCentered(view: View) {
 
-        val builder = AlertDialog.Builder(context)
-        builder.setTitle("Error")
-        builder.setMessage(getString(R.string.error_message))
-        //builder.setPositiveButton("OK", DialogInterface.OnClickListener(function = x))
+        val dialog = Dialog(activity)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.layout_error)
+        dialog.window.setBackgroundDrawableResource(android.R.color.transparent)
 
-        builder.setNeutralButton("Ok") { dialog, which ->
+            dialog.texto1.text = getString(R.string.key_error_texto1_internal)
+            dialog.texto2.text = getString(R.string.key_error_texto2_internal)
+
+
+        val button = dialog.findViewById(R.id.buttonOk) as Button
+
+        button.setOnClickListener {
+            dialog.dismiss()
             activity!!.onBackPressed()
         }
-        builder.show()
+        dialog.show()
     }
 
 

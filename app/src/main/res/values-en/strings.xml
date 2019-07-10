@@ -82,4 +82,10 @@
     <string name="key_keywords">Keywords</string>
     <string name="key_annotated_text">Annotated Text</string>
     <string name="key_wordcloud">Word Cloud</string>
+    <string name="key_button">Return</string>
+    <string name="key_error_texto1_internal">System is currently busy</string>
+    <string name="key_error_texto2_internal">We are currently working on that and hope its temporary.\n
+    Please try again later</string>
+    <string name="key_error_texto1_vazio">URL is empty</string>
+    <string name="key_error_texto2_vazio">Input an URL and try again</string>
 </resources>
