@@ -26,6 +26,10 @@
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintEnd_toEndOf="parent"
               android:textColor="#FFFFFF"
+              android:autoSizeMinTextSize="25sp"
+              android:autoSizeMaxTextSize="50sp"
+              app:autoSizeTextType="uniform"
+              android:maxLines="2"
               app:layout_constraintVertical_bias="0"
               android:text="@string/key_pesquisar_texto2" android:gravity="center" android:textSize="40sp"/>
 
@@ -53,7 +57,7 @@
                   app:layout_constraintBottom_toTopOf="@id/constraint_seekbar"
                   app:layout_constraintStart_toStartOf="parent"
                   android:textColor="#FFFFFF"
-                  android:text="@string/key_maxngram" android:gravity="center" android:textSize="25sp"/>
+                  android:text="@string/key_maxngram" android:gravity="center" android:textSize="20sp"/>
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,7 +89,7 @@
                   app:layout_constraintTop_toTopOf="parent"
                   app:layout_constraintBottom_toBottomOf="parent"
                   android:textColor="#FFFFFF"
-                  android:text="@string/key_default_termos" android:gravity="center" android:textSize="25sp"/>
+                  android:text="@string/key_default_termos" android:gravity="center" android:textSize="20sp"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -93,7 +97,7 @@
         <Button android:id="@+id/btn_pesquisar"
                 android:layout_marginTop="25dp"
                 android:textColor="#FFFFFF"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"

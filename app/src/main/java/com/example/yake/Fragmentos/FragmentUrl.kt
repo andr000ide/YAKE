@@ -106,9 +106,10 @@ class FragmentUrl : androidx.fragment.app.Fragment() {
                                 var jsonString = gson.toJson(examples)
 
 
+                                var fragmento3 = FragmentoKeywords.newInstance(jsonString)
                                 var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,urlExample!!.content!!,urlExample!!.title!!)
                                 var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
-                                var fragmento3 = FragmentoKeywords.newInstance(jsonString)
+
 
                                 adapter.addFragment(fragmento1, getString(R.string.key_annotated_text))
                                 adapter.addFragment(fragmento3, getString(R.string.key_keywords))
