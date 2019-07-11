@@ -38,79 +38,41 @@ class FragmentExemplos : androidx.fragment.app.Fragment() {
 
     val textostema2 = arrayOf("“Avô, avô, és tu”, diz a criança. Os andaimes e a vista já cansada não permitiram que José Carlos Campos, o Viseu, se reconhecesse na parede de um edifício localizado na Rua Portas do Sol. Tinha ido buscar o neto à escola quando se deparou com mais uma intervenção do Wool, o Festival de Arte Urbana da Covilhã. Entre muitos, foi o escolhido para representar o rosto da cidade na peça pintada pelo artista urbano Samina.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "José Campos, filho de mãe covilhanense, migrou de Viseu para a Covilhã ainda em criança, com 7 anos.  De Viseu, resiste apenas a “alcunha de guerra” que ganhou quando, com orgulho, vestia a camisola como defesa do Sporting da Covilhã e demonstrava a sua garra em campo. Hoje, declara-se um “covilhanense de alma e coração” e diz sentir-se grato e orgulhoso pela homenagem que lhe foi feita numa das paredes da cidade que o acolheu.\n" +
-            "\n" +
-            " \n" +
             "\n" +
             "As dificuldades que enfrentou com os nove irmãos obrigaram-no a cedo abandonar a escola e aos 13 anos já era trabalhador numa fábrica de lanifícios. Durante 45 anos, Viseu ouviu os sons dos teares diariamente, tendo vivenciado o auge da indústria têxtil da Covilhã. Desde sempre, teve uma vida ativa no desporto passando, para além do futebol, pelo basquete, andebol e até mesmo pelo atletismo, onde disputou mais de dez meias-maratonas nacionais e internacionais.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "Quanto aos motivos que o levaram a receber a homenagem, Viseu reage com humildade. Ainda hoje se pergunta: “será que eu mereço?”. Considera não ser especial, mas apenas “um homem de trabalho”  com muito conhecimento “do que eram os lanifícios”. De resto, representou o clube da terra e os seus feitos “só foram esses\". \"Não estive num ato de salvar alguém nem fiz um livro de poesia”, diz.\n" +
-            "\n" +
-            " \n" +
             "\n" +
             "Antes de ser pintado por João Samina, Viseu foi escolhido, juntamente com outras 149 pessoas, para fazer parte de um mural em homenagem aos antigos trabalhadores dos lanifícios, que reuniu várias fotos nas paredes de um edifício fabril desativado.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "“Quando me convidaram achei que era interessante retratar alguém da cidade. Tive acesso às fotos de algumas pessoas que tinham estado envolvidas no Inside Out, um projeto do Wool. Fui escolhendo quem me parecia interessante e entretanto surgiu a hipótese de retratar o Sr. Viseu”, explicou o artista Samina.  Em conversa com a organizadora Lara Seixo, a escolha do rosto de José Campos pareceu, ao artista, “certa no momento” devido à “importância do Sr. Viseu no bairro”.\n" +
-            "\n" +
-            " \n" +
             "\n" +
             "Viseu não poupa elogios ao Wool. “Enriquece a cidade e traz muita gente. Eu tenho reparado que as pessoas visitam todas estas figuras, pessoas que não são cá da Covilhã e vêm de propósito visitar o espaço onde elas estão”, comentou Viseu.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "Mas como começou este festival? Numas férias no sul de Espanha onde os dois irmãos, Pedro e Lara, arquitetos com paixão pela arte urbana, tiveram a ideia de organizar o Wool. Este é um projeto que se tem mantido vivo desde 2011 e utiliza as paredes da Covilhã como tela para dar vida a diversas obras de artistas nacionais e internacionais.\n" +
-            "\n" +
-            " \n" +
             "\n" +
             "A ambição de tornar a cidade do Interior numa referência no panorama da arte urbana nacional levou a que os irmãos se candidatassem, em 2011, aos apoios pontuais da Direção Geral das Artes. De entre mais de cem candidaturas, a ideia covilhanense foi escolhida, juntamente com 14 outros projeto. Nasceu assim a primeira das três edições do festival.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "Pelas ruas do centro histórico da Covilhã, que acolhem o movimento de arte, estão distribuídas várias peças localizadas estrategicamente. O festival procura requalificar a zona antiga da cidade através de intervenções que valorizem o património covilhanense. Para Lara Rodrigues, a distribuição das peças permite que, à medida que se vai percorrendo as ruas, se vá “descobrindo a cidade aos poucos” e isso é, para a organizadora, o grande potencial da Covilhã.\n" +
-            "\n" +
-            " \n" +
             "\n" +
             "Relacionar as peças com a região é uma das máximas mais importantes do festival: “não interessa que venham artistas à cidade fazer o que fariam em qualquer outro lugar”. Os organizadores responsabilizam-se por enviar um dossiê com fotos, recentes e antigas, tanto da cidade, como da Serra, de forma a fomentar a inspiração dos artistas. Lara acredita que as peças só conseguirão chegar, tanto às pessoas que vivem naquela zona, como às que passam diariamente, se existir “uma ligação forte” entre as criações e a cidade.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "Brincando com as traduções do inglês para português, os irmãos alcançaram uma maneira interessante de por a lã (wool em inglês) nas paredes (traduzido em inglês se diz Wall) proporcionando um jogo de sons atrativo entre as expressões inglesas. O nome em inglês foi pensado para promover a internacionalização do festival, mas a história por trás de ‘Wool’ é de origem serrana. A lã fez da Covilhã o polo da indústria dos lanifícios, a maioria das fábricas desapareceram, mas o Festival Urbano não quer que o mesmo aconteça com a história da cidade.\n" +
-            "\n" +
-            " \n" +
             "\n" +
             "Paralelamente ao festival, os artistas convidados realizam palestras e workshops que tentam facilitar a interação da população com as obras. Pedro Rodrigues, um dos organizadores, considera que essas atividades são importantes para a “formação do público e para a democratização do acesso à arte”. O Wool pretende, para além de colorir a cidade, criar nos seus habitantes interesse para que explorem outros formatos culturais.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "Os moradores acabam por se envolver no projeto e dizem que, graças a esta arte, não se sentem tão sozinhos. A comerciante Filomena Duarte queixa-se do elevado investimento realizado na baixa na cidade e do esquecimento da zona antiga: “estas ruas precisavam assim de coisas que lembrassem que também cá existe gente.” Pelo facto das criações se relacionarem com os moradores, são muitas vezes os próprios que explicam aos visitantes o que cada obra significa.\n" +
-            "\n" +
-            " \n" +
             "\n" +
             "Para Lara Rodrigues, as peças tornaram-se património comunitário e isso é visto na manutenção das pinturas. “Existem peças que já têm quatro anos, já vão a caminho dos cinco e que não estão estragadas porque as pessoas realmente respeitam, percebem a mais valia, percebem a história que está ali retratada”, justificou a arquiteta.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "É do consenso dos moradores e do Wool que as peças atraem turistas para a cidade e a pensar nisso a organização pretende estabelecer novas parcerias que facilitem o acesso às peças. “Estamos a trabalhar em sintonia com a Pousada da Juventude e vamos ter a possibilidade de fazer visitas guiadas a grupos. Estamos também a colaborar num roteiro de arte urbana que a Câmara Municipal está a desenvolver”, referiu Pedro Rodrigues.\n" +
-            "\n" +
-            " \n" +
             "\n" +
             "Durante o festival é comum que sejam feitas visitas guiadas pelos pontos da cidade onde se encontram as peças. Também é recorrente que grupos mostrem interesse em conhecer a cidade através do roteiro do Wool em outras alturas do ano. No dia 26 de dezembro um grupo vindo da Holanda participou numa visita guiada pelos organizadores do festival.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "Ana Bernardo, que reside na Holanda, é covilhanense e convidou três holandeses para passarem o Natal na cidade. Como forma de conhecer a Covilhã e a sua história, a anfitriã propôs mostrar a cidade pela “perspetiva do Wool” aos visitantes. O grupo iniciou o roteiro ao lado da Igreja de Santa Maria, local que foi palco da primeira intervenção do projeto, em 2011. Durante o percurso foram dadas explicações que contextualizavam cada uma das peças. O local escolhido para encerrar o roteiro foi a Rua Direita, onde gigantescas andorinhas cobrem a parede de um edifício. Esta peça foi desenhada na última edição do festival.\n" +
             "\n" +
-            " \n" +
-            "\n" +
             "Quem participou na visita guiada pôde conhecer a Covilhã e contribuir para o turismo na zona mais antiga da cidade.  “Fiquei surpreendido por saber que não acontece muita coisa nesta parte da cidade. Há muitos edifícios danificados e as pinturas contribuem para revitalizar a cidade”, declarou o estudante holandês Bastiaan Bouwman, que considera que  o projeto ajuda as pessoas a pensarem e a valorizarem mais a arte.\n" +
-            "\n" +
-            " \n" +
             "\n" +
             "O Wool concentra agora forças na angariação de apoios para promover mais uma edição do festival e  continuar a pintar a história da Covilhã e do seu povo nas paredes da cidade.",
         " Conclusi gli Ottavi di finale, è ora definito il quadro delle otto \"grandi d'Europa\" che si sfideranno nei Quarti di Champions League 2016/2017. L'appuntamento con l'urna di Nyon è per oggi, venerdì 17 marzo, alle ore 12, con la Juventus che se la vedrà con una tra le tre formazioni spagnole (Atlético Madrid, Barcellona e Real Madrid); i tedeschi di Bayern Monaco e Borussia Dortmund; gli inglesi del Leicester o i transalpini del Monaco. A questo riguardo, andiamo ad analizzare alcune statistiche e curiosità relative ai precedenti tra i Bianconeri e i possibili avversari nei Quarti di finale.",
