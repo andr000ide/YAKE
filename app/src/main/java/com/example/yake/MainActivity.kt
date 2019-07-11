@@ -54,7 +54,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navView = nav_view2
         navView?.setNavigationItemSelectedListener(this)
 
-
+        val size = navView!!.menu.size()
+        for (i in 0 until size) {
+            navView!!.menu.getItem(i).isCheckable = false
+            navView!!.menu.getItem(i).isChecked = false
+        }
 
 
 

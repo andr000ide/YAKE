@@ -88,6 +88,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     Fragment_Equipa()
                 )
                     .addToBackStack("4").commit()
+                navView?.setCheckedItem(R.id.nav_four)
                 check = R.id.nav_four
             }
             else if(indicator.equals("agradecimentos")){
@@ -95,6 +96,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     FragmentAgradecimentos()
                 )
                     .addToBackStack("6").commit()
+                navView?.setCheckedItem(R.id.nav_six)
                 check = R.id.nav_six
             }
             else if(indicator.equals("contactos")){
@@ -102,6 +104,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     Fragment_Contacts()
                 )
                     .addToBackStack("8").commit()
+                navView?.setCheckedItem(R.id.nav_eight)
                 check = R.id.nav_eight
             }
             else if(indicator.equals("media")){
@@ -109,6 +112,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     Fragment_Media()
                 )
                     .addToBackStack("9").commit()
+                navView?.setCheckedItem(R.id.nav_nine)
                 check = R.id.nav_nine
             }
             else if(indicator.equals("projetos")){
@@ -116,6 +120,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     Fragment_RelatedProjects()
                 )
                     .addToBackStack("11").commit()
+                navView?.setCheckedItem(R.id.nav_eleven)
                 check = R.id.nav_eleven
             }
             else {
