@@ -26,6 +26,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         setSupportActionBar(toolbar)
         val actionbar = supportActionBar
         actionbar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.ic_home_black_24dp)
 
         val indicator: String = intent.getStringExtra("indicacao")
 
@@ -63,7 +64,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 navView?.setCheckedItem(R.id.nav_two)
                 check = R.id.nav_two
             }
-            else {
+            else if (indicator.equals("url")) {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.fragment_container,
                     FragmentoPesquisarURL()
@@ -71,6 +72,53 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                     .addToBackStack("10").commit()
                 navView?.setCheckedItem(R.id.nav_ten)
                 check = R.id.nav_ten
+            }
+            else if (indicator.equals("about")) {
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fragment_container,
+                    FragmentSobre()
+                )
+                    .addToBackStack("3").commit()
+                navView?.setCheckedItem(R.id.nav_three)
+                check = R.id.nav_three
+            }
+            else if(indicator.equals("team")){
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fragment_container,
+                    Fragment_Equipa()
+                )
+                    .addToBackStack("4").commit()
+                check = R.id.nav_four
+            }
+            else if(indicator.equals("agradecimentos")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    FragmentAgradecimentos()
+                )
+                    .addToBackStack("6").commit()
+                check = R.id.nav_six
+            }
+            else if(indicator.equals("contactos")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    Fragment_Contacts()
+                )
+                    .addToBackStack("8").commit()
+                check = R.id.nav_eight
+            }
+            else if(indicator.equals("media")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    Fragment_Media()
+                )
+                    .addToBackStack("9").commit()
+                check = R.id.nav_nine
+            }
+            else if(indicator.equals("projetos")){
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+                    Fragment_RelatedProjects()
+                )
+                    .addToBackStack("11").commit()
+                check = R.id.nav_eleven
+            }
+            else {
             }
         }
     }
