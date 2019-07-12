@@ -80,7 +80,7 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
                     //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
                     //activity!!.onBackPressed()
                 }
-                if (examples == null) {
+                else if (examples == null) {
                     view.linear_vis.visibility = View.VISIBLE
                     view.spin_kit.visibility = View.INVISIBLE
                     // faz com que o utilizador volte a conseguir carregar depois de fazer o load
@@ -88,6 +88,18 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
                     view.view_grayscreen.visibility = View.GONE
                     // por popup e mandar para o fragmento two
                 }
+                else if( examples.keywords.isEmpty()){
+                    view.linear_vis.visibility = View.VISIBLE
+                    view.spin_kit.visibility = View.INVISIBLE
+                    // faz com que o utilizador volte a conseguir carregar depois de fazer o load
+                    activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                    view.view_grayscreen.visibility = View.GONE
+                    withButtonCentered(view,"vazio")
+                }
+
+                else{
+
+
                 examples?.let {
 
 
@@ -100,8 +112,8 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
                     var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
 
 
-                    adapter.addFragment(fragmento3, getString(R.string.key_keywords))
                     adapter.addFragment(fragmento1, getString(R.string.key_annotated_text))
+                    adapter.addFragment(fragmento3, getString(R.string.key_keywords))
                     adapter.addFragment(fragmento2, getString(R.string.key_wordcloud))
                     view.viewpager.adapter = adapter
 
@@ -114,6 +126,8 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
                     // faz com que o utilizador volte a conseguir carregar depois de fazer o load
                     activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                     view.view_grayscreen.visibility = View.GONE
+
+                }
                 }
             }
 
@@ -216,6 +230,10 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
         if(string=="internal" || string=="failure"){
             dialog.texto1.text = getString(R.string.key_error_texto1_internal)
             dialog.texto2.text = getString(R.string.key_error_texto2_internal)
+        }
+        if(string=="vazio"){
+            dialog.texto1.text = getString(R.string.key_error_texto1_semresultados_texto)
+            dialog.texto2.text = ""
         }
 
 

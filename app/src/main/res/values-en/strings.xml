@@ -92,4 +92,9 @@
     <string name="key_error_texto1_vazio">URL is empty</string>
     <string name="key_error_texto2_vazio">Input an URL and try again</string>
     <string name="key_texto_annotado">Text annotated with the top 10 most relevant keywords</string>
+    <string name="key_error_texto1_espaços">Error in URL</string>
+    <string name="key_error_texto2_espaços">Incorrect URL (remove spaces between letters)</string>
+    <string name="key_error_texto1_semresultados">Could not produce any results: text too short! Please try with another URL.</string>
+    <string name="key_error_texto1_semresultados_texto">Could not produce any results: text too short! Please try with another text.</string>
+
 </resources>

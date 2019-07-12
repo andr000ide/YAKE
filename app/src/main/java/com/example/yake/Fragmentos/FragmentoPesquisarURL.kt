@@ -48,12 +48,44 @@ class FragmentoPesquisarURL : androidx.fragment.app.Fragment() {
 
 
             if(result.isNotEmpty()){
-                //var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
-                view.imagePesquisa.hideKeyboard()
+                var verificador = 0
+                if(result.contains(" ")){
+                    withEspacos()
+                    verificador=1
 
-                val kotlinFragment = FragmentUrl.newInstance(result,aux)
+                }
+                else if(result.startsWith("https://www.") || result.startsWith("http://www.")){
 
-                (activity as SecondActivity).replaceFragment(kotlinFragment)
+                }
+                else if(result.startsWith("http://") || result.startsWith("https://")){
+                    if(result.startsWith("http://")){
+                        result = result.replace("http://","http://www.")
+                    }
+                    else{
+                        result = result.replace("https://","https://www.")
+                    }
+                }
+                else if(result.startsWith("www.")){
+                    result = result.replace("www.","http://www.")
+                }
+                else{
+                    result = "http://www."+result
+                }
+
+
+                if(verificador==1){
+
+                }
+                else{
+                    //var aux2 = listItemsTxt.get(view.spinner1.selectedItemPosition)
+                    view.imagePesquisa.hideKeyboard()
+
+                    val kotlinFragment = FragmentUrl.newInstance(result,aux)
+
+                    (activity as SecondActivity).replaceFragment(kotlinFragment)
+                }
+
+
             }
             else{
                 withButtonCentered()
@@ -129,6 +161,26 @@ class FragmentoPesquisarURL : androidx.fragment.app.Fragment() {
 
         dialog.texto1.text = getString(R.string.key_error_texto1_vazio)
         dialog.texto2.text = getString(R.string.key_error_texto2_vazio)
+
+
+        val button = dialog.findViewById(R.id.buttonOk) as Button
+
+        button.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
+    }
+
+    fun withEspacos() {
+
+        val dialog = Dialog(activity)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.layout_error)
+        dialog.window.setBackgroundDrawableResource(android.R.color.transparent)
+
+        dialog.texto1.text = getString(R.string.key_error_texto1_espaços)
+        dialog.texto2.text = getString(R.string.key_error_texto2_espaços)
 
 
         val button = dialog.findViewById(R.id.buttonOk) as Button

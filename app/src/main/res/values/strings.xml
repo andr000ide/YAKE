@@ -99,4 +99,9 @@
     <string name="key_error_texto1_vazio">URL está vazio</string>
     <string name="key_error_texto2_vazio">Coloque um URL e tente novamente</string>
     <string name="key_texto_annotado">Texto anotado com recurso às top 10 palavras-chave mais relevantes</string>
+    <string name="key_error_texto1_espaços">Erro no URL</string>
+    <string name="key_error_texto2_espaços">Endereço web inválido (remova espaços entre as letras)</string>
+    <string name="key_error_texto1_semresultados">Não foi possível produzir resultados: texto demasiado pequeno! Tente por favor com outro endereço.</string>
+    <string name="key_error_texto1_semresultados_texto">Não foi possível produzir resultados: texto demasiado pequeno! Tente por favor com outro texto.</string>
+
 </resources>
