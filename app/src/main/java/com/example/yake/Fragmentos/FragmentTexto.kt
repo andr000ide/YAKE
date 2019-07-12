@@ -95,8 +95,8 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
                     var gson = Gson()
                     var jsonString = gson.toJson(examples)
 
-                    var fragmento3 = FragmentoKeywords.newInstance(jsonString)
                     var fragmento1 = FragmentoAnnotatedText.newInstance(jsonString,texto,titulo)
+                    var fragmento3 = FragmentoKeywords.newInstance(jsonString)
                     var fragmento2 = Fragmento_WordCloud.newInstance(jsonString)
 
 

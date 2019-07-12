@@ -14,7 +14,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="app_name" translatable="false">YAKE</string>
+    <string name="app_name" >Extrator de palavras chave</string>
     <string name="key_agradecimentos">Agradecimentos</string>
     <string name="key_contactos">Contactos</string>
     <string name="agradecimentos">Agradecimentos</string>
@@ -86,7 +86,7 @@
     <string name="key_url_titulo">Obtenha palavras-chave por URL</string>
     <string name="key_hint_url">cole aqui o url</string>
     <string name="key_default_termos">3-termos</string>
-    <string name="key_hint_texto">cole aqui o texto</string>
+    <string name="key_hint_texto">introduze ou cole aqui o seu texto</string>
     <string name="key_search_texto">Obter Palavras-Chave</string>
     <string name="key_projects">Projetos Relacionados</string>
     <string name="key_related_projects_tellmestoires">Conta-me Histórias</string>

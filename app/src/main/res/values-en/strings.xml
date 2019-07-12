@@ -27,6 +27,9 @@
         knowledge but also the emergence of new and innovative products.
 
     </string>
+
+    <string name="app_name" >Keyword extractor</string>
+
     <string name="liaad_url">https://www.inesctec.pt/en</string>
     <string name="mail_foi_copiado">" Mail has been copied"</string>
     <string name="contactos">contact</string>
@@ -75,7 +78,7 @@
     <string name="key_url_titulo">Get keywords from URL</string>
     <string name="key_hint_url">paste url here</string>
     <string name="key_default_termos">3-terms</string>
-    <string name="key_hint_texto">paste text here</string>
+    <string name="key_hint_texto">enter or paste your text here</string>
     <string name="key_search_texto">Extract Keywords</string>
     <string name="key_projects">Related Projects</string>
     <string name="key_related_projects_tellmestoires">Tell me Stories</string>
