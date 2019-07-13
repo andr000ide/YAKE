@@ -31,6 +31,7 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
         var aux = "3"
         var textoparam = arguments?.getString("texto")
         if(textoparam!=null){
+            view.btn_pesquisar.visibility = View.GONE
             view.titulo_texto.visibility = View.GONE
             view.searchbar.setText(textoparam.toString())
             view.info2_texto.visibility = View.GONE
@@ -79,9 +80,28 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
                     }
                 }
             )
+            view.btn_pesquisar2.setOnClickListener {
+                var content = view.searchbar.text.toString()
+
+
+
+
+                content.let {
+                    if(content.isNotEmpty()){
+                        view.hideKeyboard()
+
+
+
+                        val kotlinFragment = FragmentTexto.newInstance(content,"",aux)
+
+                        (activity as SecondActivity).replaceFragment(kotlinFragment)
+                    }
+                }
+            }
 
         }
         else{
+            view.btn_pesquisar2.visibility = View.GONE
             view.titulo_texto.visibility = View.VISIBLE
             view.info4.visibility = View.GONE
             view.constraint_seekbar2.visibility = View.GONE
@@ -129,28 +149,29 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
                     }
                 }
             )
-        }
-
-
-
-        view.btn_pesquisar.setOnClickListener {
-            var content = view.searchbar.text.toString()
+            view.btn_pesquisar.setOnClickListener {
+                var content = view.searchbar.text.toString()
 
 
 
 
-            content.let {
-                if(content.isNotEmpty()){
-                    view.hideKeyboard()
+                content.let {
+                    if(content.isNotEmpty()){
+                        view.hideKeyboard()
 
 
 
-                    val kotlinFragment = FragmentTexto.newInstance(content,"",aux)
+                        val kotlinFragment = FragmentTexto.newInstance(content,"",aux)
 
-                    (activity as SecondActivity).replaceFragment(kotlinFragment)
+                        (activity as SecondActivity).replaceFragment(kotlinFragment)
+                    }
                 }
             }
         }
+
+
+
+
 
         langHelper = LangHelper(activity!!.applicationContext)
 

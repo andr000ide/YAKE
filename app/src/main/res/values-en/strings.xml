@@ -91,4 +91,14 @@
     <string name="key_error_texto1_semresultados">Could not produce any results: text too short! Please try with another URL.</string>
     <string name="key_error_texto1_semresultados_texto">Could not produce any results: text too short! Please try with another text.</string>
 
+    <string name="portugues">Portuguese</string>
+    <string name="italiano">Italian</string>
+    <string name="german">German</string>
+    <string name="spanish">Spanish</string>
+    <string name="finnish">Finnish</string>
+    <string name="french">French</string>
+    <string name="polish">Polish</string>
+    <string name="turkish">Turkish</string>
+    <string name="arabic">Arabic</string>
+    <string name="dutch">Dutch</string>
 </resources>

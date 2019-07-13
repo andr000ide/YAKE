@@ -98,5 +98,15 @@
     <string name="key_error_texto2_espaços">Endereço web inválido (remova espaços entre as letras)</string>
     <string name="key_error_texto1_semresultados">Não foi possível produzir resultados: texto demasiado pequeno! Tente por favor com outro endereço.</string>
     <string name="key_error_texto1_semresultados_texto">Não foi possível produzir resultados: texto demasiado pequeno! Tente por favor com outro texto.</string>
+    <string name="portugues">Português</string>
+    <string name="italiano">Italiano</string>
+    <string name="german">Alemão</string>
+    <string name="spanish">Espanhol</string>
+    <string name="finnish">Finlandês</string>
+    <string name="french">Francês</string>
+    <string name="polish">Polaco</string>
+    <string name="turkish">Turco</string>
+    <string name="arabic">Árabe</string>
+    <string name="dutch">Holandês</string>
 
 </resources>

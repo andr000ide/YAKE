@@ -20,7 +20,8 @@
 
     <TextView android:layout_width="0dp" android:layout_height="wrap_content"
               app:layout_constraintTop_toTopOf="parent"
-              app:layout_constraintBottom_toTopOf="@id/titulo"
+              android:id="@+id/aux2"
+              app:layout_constraintBottom_toTopOf="@id/constraint"
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintEnd_toEndOf="parent"
               android:textColor="#FFFFFF"
@@ -33,40 +34,16 @@
               android:text="@string/key_url_titulo" android:gravity="center" android:textSize="35sp"
     />
 
-    <TextView
-            android:id="@+id/titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/key_title"
-            android:textSize="25sp"
-            app:layout_constraintVertical_bias="0.3"
-            android:autoSizeMinTextSize="30sp"
-            android:autoSizeMaxTextSize="50sp"
-            android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
 
-    <TextView
-            android:id="@+id/descricao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:paddingTop="10dp"
-            android:text="@string/key_description"
-            android:textSize="18sp"
-            android:paddingBottom="20dp"
-            app:layout_constraintTop_toBottomOf="@id/titulo"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
 
 
 
 
     <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
                                                        android:id="@+id/constraint"
-                                                       app:layout_constraintTop_toBottomOf="@id/descricao"
+                                                       android:paddingTop="40dp"
+                                                       android:paddingBottom="20dp"
+                                                       app:layout_constraintTop_toBottomOf="@id/aux2"
                                                        android:layout_height="wrap_content">
 
         <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -105,6 +82,7 @@
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:id="@+id/info2"
               android:paddingTop="10dp"
+              android:layout_marginTop="10dp"
               android:paddingStart="10dp"
               app:layout_constraintTop_toBottomOf="@id/constraint"
               app:layout_constraintBottom_toTopOf="@id/constraint_seekbar"

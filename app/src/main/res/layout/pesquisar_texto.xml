@@ -78,8 +78,23 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <EditText
+        <Button android:id="@+id/btn_pesquisar2"
+                android:layout_marginTop="25dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:padding="2dp"
+                android:background="@drawable/initial_page_button"
                 app:layout_constraintTop_toBottomOf="@id/constraint_seekbar2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/searchbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/key_search_texto"/>
+
+        <EditText
+                app:layout_constraintTop_toBottomOf="@id/btn_pesquisar2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="match_parent"

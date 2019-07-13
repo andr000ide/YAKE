@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.yake.Auxiliares.LangHelper
 import com.example.yake.R
 import com.example.yake.SecondActivity
 import com.synnapps.carouselview.ViewListener
@@ -12,7 +13,7 @@ import kotlinx.android.synthetic.main.layout_carossel.view.*
 
 
 class FragmentExemplos : androidx.fragment.app.Fragment() {
-
+    private lateinit var langHelper: LangHelper
     val tema = arrayOf("Kaggle", "GitLab", "Genius", "Technology")
     val tema2 = arrayOf(
         "Portuguese",
@@ -27,6 +28,18 @@ class FragmentExemplos : androidx.fragment.app.Fragment() {
         "Arabic"
     )
 
+    val tema3 = arrayOf(
+        "Português",
+        "Italiano",
+        "Alemão",
+        "Holandês",
+        "Espanhol",
+        "Finlandês",
+        "Francês",
+        "Polaco",
+        "Turco",
+        "Árabe"
+    )
 
     val textostema = arrayOf("Sources tell us that Google is acquiring Kaggle, a platform that hosts data science and machine learning   competitions. Details about the transaction remain somewhat vague , but given that Google is hosting   its Cloud Next conference in San Francisco this week, the official announcement could come as early   as tomorrow.  Reached by phone, Kaggle co-founder CEO Anthony Goldbloom declined to deny that the   acquisition is happening. Google itself declined 'to comment on rumors'.   Kaggle, which has about half a million data scientists on its platform, was founded by Goldbloom   and Ben Hamner in 2010. The service got an early start and even though it has a few competitors   like DrivenData, TopCoder and HackerRank, it has managed to stay well ahead of them by focusing on its   specific niche. The service is basically the de facto home for running data science  and machine learning   competitions.  With Kaggle, Google is buying one of the largest and most active communities for   data scientists - and with that, it will get increased mindshare in this community, too   (though it already has plenty of that thanks to Tensorflow and other projects).   Kaggle has a bit of a history with Google, too, but that's pretty recent. Earlier this month,   Google and Kaggle teamed up to host a \$100,000 machine learning competition around classifying   YouTube videos. That competition had some deep integrations with the Google Cloud Platform, too.   Our understanding is that Google will keep the service running - likely under its current name.   While the acquisition is probably more about Kaggle's community than technology, Kaggle did build   some interesting tools for hosting its competition and 'kernels', too. On Kaggle, kernels are   basically the source code for analyzing data sets and developers can share this code on the   platform (the company previously called them 'scripts').  Like similar competition-centric sites,   Kaggle also runs a job board, too. It's unclear what Google will do with that part of the service.   According to Crunchbase, Kaggle raised \$12.5 million (though PitchBook says it's \$12.75) since its   launch in 2010. Investors in Kaggle include Index Ventures, SV Angel, Max Levchin, Naval Ravikant,   Google chief economist Hal Varian, Khosla Ventures and Yuri Milner",
         "  GitLab, a startup that provides open source and premium source code repository software that people use to collaborate on software, is announcing today that it has acquired Gitter, a startup that provides chat rooms that are attached to repositories of code so that collaborators can exchange messages. Terms of the deal weren’t disclosed.   Gitter has popped up more and more on GitHub, which is arguably GitLab’s biggest competitor. But Gitter chat rooms are also sprinkled throughout GitLab. For example, a repository for a command-line interface (CLI) for talking on Gitter itself has a Gitter chat room.   GitLab won’t bundle it in its community edition or its enterprise edition yet, but it will open-source the Gitter code for others to build on, GitLab cofounder and CEO Sid Sijbrandij told VentureBeat in an interview. What’s happening now, though, is that as part of GitLab, Gitter is launching a new feature called Topics, where people will be able to ask and answer questions — sort of like Stack Overflow.   'Although Gitter is best in class with indexing things, it’s still sometimes hard to find things,' Sijbrandij said. “In this Q&A product, it’s a lot easier to structure the Q&A. You’re not dealing so much with a chronological timeline where people have different conversations that cross each other. There’s a location for every piece of knowledge, and it can grow over time.”  That technology is already available in beta in Gitter rooms on GitHub, and it will become available on GitLab’s Gitter pages over time, Sijbrandij said.   Gitter launched in 2014, the same year that Slack launched. In October 2015 Gitter announced a \$2.2 million funding round. Investors included Index Ventures, Kima Ventures, and Nexus Ventures. Three of Gitter’s six employees are joining GitLab, whose team is remote. Gitter cofounders Mike Bartlett and Andrew Newdigate will remain in London. More than 800,000 developers have registered on Gitter since it launched, and today it has around 300,000 monthly active users.   GitLab announced a \$20 million funding round in September. GitLab still offers the Mattermost open source software, which amounts to an alternative to the proprietary Slack app. The startup will continue to recommend Mattermost for internal team communication, a spokesperson told VentureBeat in an email.   Sijbrandij’s blog post on the news is here. Newdigate’s blog post on the news is here.  ",
@@ -88,7 +101,7 @@ class FragmentExemplos : androidx.fragment.app.Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.layout_carossel, container, false)
-
+        langHelper = LangHelper(activity!!.applicationContext)
 
         val carousel_View = view.carouselView
         val carouse2_View = view.carouselView2
@@ -145,7 +158,13 @@ class FragmentExemplos : androidx.fragment.app.Fragment() {
                 (activity as SecondActivity).replaceFragment(kotlinFragment)
 
             }
-            view.titulo_noticia1.text = tema2.get(position*2)
+            if (langHelper.getLanguageSaved().equals("en")) {
+                view.titulo_noticia1.text = tema2.get(position*2)
+            }
+            else{
+                view.titulo_noticia1.text = tema3.get(position*2)
+            }
+
 
             view.parte2.setOnClickListener {
                 val aux = view.titulo_noticia2.text.toString()
@@ -155,8 +174,13 @@ class FragmentExemplos : androidx.fragment.app.Fragment() {
                 (activity as SecondActivity).replaceFragment(kotlinFragment)
 
             }
+            if (langHelper.getLanguageSaved().equals("en")) {
+                view.titulo_noticia2.text = tema2.get(position*2+1)
+            }
+            else{
+                view.titulo_noticia2.text = tema3.get(position*2+1)
+            }
 
-            view.titulo_noticia2.text = tema2.get(position*2+1)
 
             return view
         }
