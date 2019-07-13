@@ -28,17 +28,110 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.pesquisar_texto, container, false)
 
-
+        var aux = "3"
         var textoparam = arguments?.getString("texto")
         if(textoparam!=null){
             view.titulo_texto.visibility = View.GONE
             view.searchbar.setText(textoparam.toString())
+            view.info2_texto.visibility = View.GONE
+            view.constraint_seekbar_texto.visibility = View.GONE
+            val step = 1
+            val max = 10
+            val min = 1
+            view.seekBar2.setMax((max - min) / step)
+
+
+            view.seekBar2.setOnSeekBarChangeListener(
+                object : OnSeekBarChangeListener {
+                    override fun onStopTrackingTouch(seekBar: SeekBar) {}
+
+                    override fun onStartTrackingTouch(seekBar: SeekBar) {}
+
+                    override fun onProgressChanged(
+                        seekBar: SeekBar, progress: Int,
+                        fromUser: Boolean
+                    ) {
+                        // Ex :
+                        // And finally when you want to retrieve the value in the range you
+                        // wanted in the first place -> [3-5]
+                        //
+                        // if progress = 13 -> value = 3 + (13 * 0.1) = 4.3
+                        val value = (min + progress * step).toDouble().toInt()
+                        aux = value.toString()
+                        if (langHelper.getLanguageSaved().equals("en")) {
+                            if(value == 1){
+                                view.info3.text = value.toString() + "-term"
+                            }
+                            else{
+                                view.info3.text = value.toString() + "-terms"
+                            }
+
+                        }
+                        else{
+                            if(value == 1){
+                                view.info3.text = value.toString() + "-termo"
+                            }
+                            else{
+                                view.info3.text = value.toString() + "-termos"
+                            }
+                        }
+
+                    }
+                }
+            )
+
         }
         else{
             view.titulo_texto.visibility = View.VISIBLE
+            view.info4.visibility = View.GONE
+            view.constraint_seekbar2.visibility = View.GONE
+            val step = 1
+            val max = 10
+            val min = 1
+            view.seekBar.setMax((max - min) / step)
+
+
+            view.seekBar.setOnSeekBarChangeListener(
+                object : OnSeekBarChangeListener {
+                    override fun onStopTrackingTouch(seekBar: SeekBar) {}
+
+                    override fun onStartTrackingTouch(seekBar: SeekBar) {}
+
+                    override fun onProgressChanged(
+                        seekBar: SeekBar, progress: Int,
+                        fromUser: Boolean
+                    ) {
+                        // Ex :
+                        // And finally when you want to retrieve the value in the range you
+                        // wanted in the first place -> [3-5]
+                        //
+                        // if progress = 13 -> value = 3 + (13 * 0.1) = 4.3
+                        val value = (min + progress * step).toDouble().toInt()
+                        aux = value.toString()
+                        if (langHelper.getLanguageSaved().equals("en")) {
+                            if(value == 1){
+                                view.info.text = value.toString() + "-term"
+                            }
+                            else{
+                                view.info.text = value.toString() + "-terms"
+                            }
+
+                        }
+                        else{
+                            if(value == 1){
+                                view.info.text = value.toString() + "-termo"
+                            }
+                            else{
+                                view.info.text = value.toString() + "-termos"
+                            }
+                        }
+
+                    }
+                }
+            )
         }
 
-        var aux = "3"
+
 
         view.btn_pesquisar.setOnClickListener {
             var content = view.searchbar.text.toString()
@@ -61,50 +154,7 @@ class FragmentoPesquisarTexto : androidx.fragment.app.Fragment() {
 
         langHelper = LangHelper(activity!!.applicationContext)
 
-        val step = 1
-        val max = 10
-        val min = 1
-        view.seekBar.setMax((max - min) / step)
 
-
-        view.seekBar.setOnSeekBarChangeListener(
-            object : OnSeekBarChangeListener {
-                override fun onStopTrackingTouch(seekBar: SeekBar) {}
-
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-
-                override fun onProgressChanged(
-                    seekBar: SeekBar, progress: Int,
-                    fromUser: Boolean
-                ) {
-                    // Ex :
-                    // And finally when you want to retrieve the value in the range you
-                    // wanted in the first place -> [3-5]
-                    //
-                    // if progress = 13 -> value = 3 + (13 * 0.1) = 4.3
-                    val value = (min + progress * step).toDouble().toInt()
-                    aux = value.toString()
-                    if (langHelper.getLanguageSaved().equals("en")) {
-                        if(value == 1){
-                            view.info.text = value.toString() + "-term"
-                        }
-                        else{
-                            view.info.text = value.toString() + "-terms"
-                        }
-
-                    }
-                    else{
-                        if(value == 1){
-                            view.info.text = value.toString() + "-termo"
-                        }
-                        else{
-                            view.info.text = value.toString() + "-termos"
-                        }
-                    }
-
-                }
-            }
-        )
 
 
         return view

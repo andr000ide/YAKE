@@ -76,7 +76,7 @@ class FragmentTexto : androidx.fragment.app.Fragment() {
                     // faz com que o utilizador volte a conseguir carregar depois de fazer o load
                     activity!!.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                     view.view_grayscreen.visibility = View.GONE
-                    withButtonCentered(view,"internal")
+                    withButtonCentered(view,"vazio")
                     //Toast.makeText(activity,"Erro, tente com outro input",Toast.LENGTH_LONG);
                     //activity!!.onBackPressed()
                 }

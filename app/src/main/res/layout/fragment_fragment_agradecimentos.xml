@@ -132,7 +132,25 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/outros"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginBottom="8dp"
+                  android:layout_marginLeft="18dp"
+                  android:layout_marginRight="18dp"
+                  android:textSize="25sp"
+        />
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="18dp"
+                  android:layout_marginRight="18dp"
+                  android:layout_marginBottom="18dp"
+                  android:textSize="15sp"
+                  android:autoLink="email"
+                  android:textColorLink="@color/backgroundMain"
+                  android:id="@+id/texto_outros"
+                  android:text="@string/outros_texto"/>
     </LinearLayout>
 
 

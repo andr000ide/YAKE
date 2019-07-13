@@ -14,7 +14,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="app_name" >Extrator de palavras chave</string>
+    <string name="app_name" >Extrator de palavras-chave</string>
     <string name="key_agradecimentos">Agradecimentos</string>
     <string name="key_contactos">Contactos</string>
     <string name="agradecimentos">Agradecimentos</string>
@@ -26,12 +26,7 @@
     <string name="financiamento_texto">Este projeto foi parcialmente financiado pelo projeto “TEC4Growth – Pervasive Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” o qual é financiado pelo NORTE 2020, ao abrigo do PORTUGAL 2020, bem como através do European Regional Development Fund (ERDF) através do programa COMPETE 2020 no âmbito do projeto POCI-01-0145-FEDER-006961, e por fundos nacionais da FCT – Fundação da Ciência e Tecnologia ao abrigo do UID/EEA/50014/2013 e do projeto UID/MAT/00212/2013.
     </string>
     <string name="outros">Outros</string>
-    <string name="outros_texto">Um agradecimento especial ao <a href="http://arquivo.pt">arquivo da web Portuguesa</a> e
-        à sua
-        equipa que ao longo dos últimos anos criou uma plataforma de reconhecido de valor na preservação dos conteúdos
-        digitais portugueses,
-        fomentando a partilha do conhecimento e o surgimento de aplicações inovadoras.
-    </string>
+    <string name="outros_texto">Um agradecimento especial à Sofia Dias (sofiadias.design@gmail.com) pela elaboração do logo do YAKE!</string>
     <string name="liaad_url">https://www.inesctec.pt/pt</string>
     <string name="mail_foi_copiado">" O email foi copiado."</string>
     <string name="contactos">contactos</string>
@@ -84,13 +79,13 @@
     </string>
     <string name="key_error_wordcloud">Erro a carregar a Wordcloud</string>
     <string name="key_url_titulo">Obtenha palavras-chave por URL</string>
-    <string name="key_hint_url">cole aqui o url</string>
+    <string name="key_hint_url">escreva ou cole aqui o URL</string>
     <string name="key_default_termos">3-termos</string>
-    <string name="key_hint_texto">introduze ou cole aqui o seu texto</string>
+    <string name="key_hint_texto">introduza ou cole aqui o seu texto</string>
     <string name="key_search_texto">Obter Palavras-Chave</string>
     <string name="key_projects">Projetos Relacionados</string>
     <string name="key_related_projects_tellmestoires">Conta-me Histórias</string>
-    <string name="key_keywords">Palavras Chave</string>
+    <string name="key_keywords">Palavras-Chave</string>
     <string name="key_annotated_text">Texto Anotado</string>
     <string name="key_wordcloud">Termos\nRelacionados</string>
     <string name="key_button">Voltar</string>
@@ -98,7 +93,7 @@
     <string name="key_error_texto2_internal">Já estamos a trabalhar nisso e esperamos que seja temporário. Por favor tente novamente mais tarde</string>
     <string name="key_error_texto1_vazio">URL está vazio</string>
     <string name="key_error_texto2_vazio">Coloque um URL e tente novamente</string>
-    <string name="key_texto_annotado">Texto anotado com recurso às top 10 palavras-chave mais relevantes</string>
+    <string name="key_texto_annotado">Texto anotado com recurso às top 20 palavras-chave mais relevantes</string>
     <string name="key_error_texto1_espaços">Erro no URL</string>
     <string name="key_error_texto2_espaços">Endereço web inválido (remova espaços entre as letras)</string>
     <string name="key_error_texto1_semresultados">Não foi possível produzir resultados: texto demasiado pequeno! Tente por favor com outro endereço.</string>

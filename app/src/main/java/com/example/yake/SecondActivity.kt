@@ -27,7 +27,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         val actionbar = supportActionBar
         actionbar?.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationIcon(R.drawable.ic_home_black_24dp)
-        actionbar?.title=getString(R.string.app_name)
+        actionbar?.title=getString(R.string.key_title)
 
         val indicator: String = intent.getStringExtra("indicacao")
 

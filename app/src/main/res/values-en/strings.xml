@@ -21,13 +21,7 @@
     <string name="financiamento_texto">This work was partially funded by Project “TEC4Growth - Pervasive Intelligence, Enhancers and Proofs of Concept with Industrial Impact/NORTE-01-0145-FEDER-000020” which was financed by the NORTE 2020, under the PORTUGAL 2020, as well as by the European Regional Development Fund (ERDF) through the COMPETE 2020 Programme within project POCI-01-0145-FEDER-006961, and by National Funds through the FCT as part of project UID/EEA/50014/2013 and of the project UID/MAT/00212/2013.
     </string>
     <string name="outros">Others</string>
-    <string name="outros_texto">
-        A special thanks goes to the <a href="http://arquivo.pt">Portuguese Web Archive</a> and to its team for creating an
-        outstanding platform that aims to archive the Portuguese digital contents, thus providing not only the share of
-        knowledge but also the emergence of new and innovative products.
-
-    </string>
-
+    <string name="outros_texto">A special thanks to Sofia Dias (sofiadias.design@gmail.com) for elaborating YAKE!\'s logo</string>
     <string name="app_name" >Keyword extractor</string>
 
     <string name="liaad_url">https://www.inesctec.pt/en</string>
@@ -76,7 +70,7 @@
     </string>
     <string name="key_error_wordcloud">Error loading Wordcloud</string>
     <string name="key_url_titulo">Get keywords from URL</string>
-    <string name="key_hint_url">paste url here</string>
+    <string name="key_hint_url">type or paste URL here</string>
     <string name="key_default_termos">3-terms</string>
     <string name="key_hint_texto">enter or paste your text here</string>
     <string name="key_search_texto">Extract Keywords</string>
@@ -91,7 +85,7 @@
     Please try again later</string>
     <string name="key_error_texto1_vazio">URL is empty</string>
     <string name="key_error_texto2_vazio">Input an URL and try again</string>
-    <string name="key_texto_annotado">Text annotated with the top 10 most relevant keywords</string>
+    <string name="key_texto_annotado">Text annotated with the top 20 most relevant keywords</string>
     <string name="key_error_texto1_espaços">Error in URL</string>
     <string name="key_error_texto2_espaços">Incorrect URL (remove spaces between letters)</string>
     <string name="key_error_texto1_semresultados">Could not produce any results: text too short! Please try with another URL.</string>
