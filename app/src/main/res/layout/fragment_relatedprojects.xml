@@ -11,12 +11,12 @@
                   android:id="@+id/titulo"
                   android:textColor="#FFFFFF"
                   android:layout_marginTop="20dp"
-                  android:layout_marginBottom="40dp"
+                  android:layout_marginBottom="30dp"
                   android:text="@string/key_projects" android:gravity="center" android:textSize="40sp"/>
 
 
         <Button android:id="@+id/btn_contamehistorias"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:textColor="#FFFFFF"
                 android:textSize="25sp"

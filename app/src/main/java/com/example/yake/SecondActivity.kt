@@ -54,7 +54,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 )
                     .addToBackStack("1").commit()
                 navView?.setCheckedItem(R.id.nav_one)
-                check = R.id.nav_one
+                check = 99
             }
             else if (indicator.equals("texto")) {
                 supportFragmentManager.beginTransaction().replace(
@@ -63,7 +63,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 )
                     .addToBackStack("2").commit()
                 navView?.setCheckedItem(R.id.nav_two)
-                check = R.id.nav_two
+                check = 99
             }
             else if (indicator.equals("url")) {
                 supportFragmentManager.beginTransaction().replace(
@@ -72,7 +72,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                 )
                     .addToBackStack("10").commit()
                 navView?.setCheckedItem(R.id.nav_ten)
-                check = R.id.nav_ten
+                check = 99
             }
             else if (indicator.equals("about")) {
                 supportFragmentManager.beginTransaction().replace(
@@ -140,7 +140,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                             FragmentExemplos()
                         )
                             .addToBackStack("1").commit()
-                        check = R.id.nav_one
+                        check = 99
                     }
                 }
                 R.id.nav_two -> {
@@ -150,7 +150,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                             FragmentoPesquisarTexto()
                         )
                             .addToBackStack("2").commit()
-                        check = R.id.nav_two
+                        check = 99
                     }
                 }
                 R.id.nav_three -> {
@@ -202,7 +202,7 @@ class SecondActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
                         FragmentoPesquisarURL()
                     )
                         .addToBackStack("10").commit()
-                    check = R.id.nav_ten
+                    check = 99
                 }
                 R.id.nav_eleven  -> {
                     supportFragmentManager.beginTransaction().replace(R.id.fragment_container,

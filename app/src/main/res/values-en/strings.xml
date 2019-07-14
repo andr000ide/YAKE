@@ -72,7 +72,7 @@
     <string name="key_url_titulo">Get keywords from URL</string>
     <string name="key_hint_url">type or paste URL here</string>
     <string name="key_default_termos">3-terms</string>
-    <string name="key_hint_texto">enter or paste your text here</string>
+    <string name="key_hint_texto">type or paste your text here</string>
     <string name="key_search_texto">Extract Keywords</string>
     <string name="key_projects">Related Projects</string>
     <string name="key_related_projects_tellmestoires">Tell me Stories</string>
