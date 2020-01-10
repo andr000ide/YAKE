@@ -8,7 +8,7 @@
 #### I made the app with the intention of learning and get better at programming mobile.
 
 ### Some images of the App:
-|<img src="1.jpg" height="400">|<img src="2.jpg" height="400">|<img src="3.jpg" height="400">|<img src="4.jpg" height="400">|
+<img src="1.jpg" height="400"><img src="2.jpg" height="400"><img src="3.jpg" height="400"><img src="4.jpg" height="400">
 
-|<img src="5.jpg" height="400">|<img src="6.jpg" height="400">|<img src="7.jpg" height="400">|<img src="8.jpg" height="400">|
-|<img src="9.jpg" height="400">|<img src="10.jpg" height="400">|
+<img src="5.jpg" height="400"><img src="6.jpg" height="400"><img src="7.jpg" height="400"><img src="8.jpg" height="400">
+<img src="9.jpg" height="400"><img src="10.jpg" height="400">
