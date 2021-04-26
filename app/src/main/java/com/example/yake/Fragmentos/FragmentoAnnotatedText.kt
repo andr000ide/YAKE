@@ -97,7 +97,7 @@ class FragmentoAnnotatedText : androidx.fragment.app.Fragment() {
             val mutableList = mutableListOf<Int>()
             var index = 0;
             while (index != -1) {
-                index = mainString!!.indexOf(item, index);
+                index = spannableString!!.indexOf(item, index);
                 if (index != -1) {
                     mutableList.add(index);
                     index++;
@@ -107,7 +107,7 @@ class FragmentoAnnotatedText : androidx.fragment.app.Fragment() {
 
 
 
-            if (mainString!!.contains(item)) {
+            if (spannableString!!.contains(item)) {
                 for (item2 in mutableList) {
                     val endIndex = item2 + item.length
                     spannableString.setSpan(
